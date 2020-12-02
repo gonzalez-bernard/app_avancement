@@ -5,6 +5,8 @@ Module Equation
 import csv
 import math
 import numpy as np
+import settings
+
 import src.py.constantes as cst
 from src.py.utils import getFilePath
 

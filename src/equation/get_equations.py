@@ -4,6 +4,8 @@ On récupère les équations et on les transmet au javascript
 '''
 import sys
 import json
+import settings
+
 from src.equation.Equation import Equations
 e = Equations()
 

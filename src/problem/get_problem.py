@@ -3,6 +3,8 @@ Récupération problème
 """
 import json
 import sys
+import settings
+
 from Problem import Problem
 
 

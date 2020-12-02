@@ -9,6 +9,8 @@ from hashlib import md5
 import sys
 import smtplib
 import json
+import settings
+
 from py.utils import get_random_pwd
 import py.classes.Database as DB
 import py.classes.Session as SESSION

@@ -17,8 +17,9 @@ var init_evolution = function() {
 
 
   // Calcul des coeffs de telle façon quand 20 pas on obtienne xmax
+  let xmax
   if (eq.unite==1){
-    let xmax = eq.avancement.xmax
+    xmax = eq.avancement.xmax
   } else {
     let rl = eq.avancement.reactif_limitant // nom réactif reactif_limitant
     for (var indice in eq.reactifs){
@@ -26,7 +27,7 @@ var init_evolution = function() {
         break;
       }
     }
-    let xmax = eq.quantites[indice]
+    xmax = eq.quantites[indice]
   }
   let coeff = []
   let rl = eq.reactifs.length
