@@ -6,7 +6,7 @@ import sys
 import json
 #import settings
 
-from equation.Equation import Equations
+from Equation import Equations
 e = Equations()
 
 r = e.get_equations()
