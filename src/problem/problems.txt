@@ -1,0 +1,31 @@
+N°  Niveau      Données         Recherche   Equation    Remarque
+1   1           mr0             np0         3 E           
+2   1           mr1             np0         20 NE
+3   1           np1             nr0         17 E
+4   1           mp0             mr1         18 E
+
+13  1           nr0             np1         2 E
+14  1           nr0             nr1         3 NE
+15  1           nr0             mr1         4 E
+16  1           mr0             mr1         10 NE
+
+5   2           nr1, nr0        np0         0 E
+6   2           idem                        9 NE
+7   2           mp0             nr0         21 NE
+8   2           nr1             mp0         6 NE         donnée inutile
+9   2           nr0, nr1        mp3         1 NE
+
+17  2           nr0, mr1        np0         6 E
+18  2           nr0, mr1        mp0         13 E
+19  2           nr0, nr1, np0   np0         16 E
+
+10  3           mr0, tr1        mp1         14 E         ions, concentration
+11  3           tr1, mr0        vr1         14 E         volume et concentrations
+12  3           mr0             vr0         19 E         volume molaire
+
+20  3           tr0,vr0,tr1,vr1 np0         15 NE
+21  3           vr0, vr1        np0         10 E
+22  3           vr0, mr1        mp0         11 E
+23  3           nr0, mr1 rest   mr1         12 E        on cherche masse initiale
+24  3           mr0, tr1, vr1   mr1         17 E                            
+25  3           mr0, tr1, vr1   mp0         16 E                

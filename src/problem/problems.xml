@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+
+  <problem id='1'>
+    <level>1</level>
+    <context>La combustion complète du méthane dans le dioxygène produit du dioxyde de carbone et de la vapeur d'eau.[br/]
+    On peut résumer cette réaction par l'équation : [br/] [b]#eqe3#[/b][/b]</context>
+    <question>Quelle est la quantité de matière en dioxyde de carbone produite si #mr0# g de méthane #r0# a été consommé ?</question>
+    <calcul>#mr0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mr0#=!;#nr0#=mr0/Mr0;#X#=nr0*cp0/cr0</calcul>
+    <solution>Il faut d'abord calculer la quantité de matière de méthane : 
+      $$ n=\frac{m}{M}=\frac{#smr0#}{#Mr0#} = #snr0# $$
+      Le méthane #r0# est le réactif limitant, donc $$ x_{max} = \frac{n}{c} = \frac{#snr0#}{#cr0#} $$
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est :
+      \( n = c \times x_{max} \)[br/]
+      On obtient donc $$ X = #snr0# \times \frac{#cp0#}{#cr0#} = #X# \approx #sX# ~moles $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Il faut d'abord calculer la quantité de matière de méthane. [br/]
+      Le méthane sera le réactif limitant.
+    </help>
+    <img>methane.png</img>
+  </problem>
+
+  <problem id='2'>
+    <level>1</level>
+    <context>Dans une pile à combustible on réalise la synthèse de l'eau en faisant réagir du dihyrogène avec le dioxygène
+    de l'air : [br/] [b]#eq20#[/b]</context>
+    <question>Quelle est la quantité de matière d'eau produite si #mr1# g de dioxygène #r1# a été consommé ?</question>
+    <calcul>#mr1#=round(uniform(50,200),1);#cr1#=!;#cp0#=!;#Mr1#=!;#nr1#=mr1/Mr1;#X#=nr1*cp0/cr1</calcul>
+    <solution>Il faut d'abord équilibrer l'équation #eqe20#[/b].[br/]
+      Puis calculer la quantité de matière de dioxygène : $$ n=\frac{m}{M}=\frac{#mr1#}{#Mr1#} = #snr1# $$
+      Le dioxygène #r1# est le réactif limitant, donc $$ x_{max} = \frac{n}{c} = \frac{#snr1#}{#cr1#} $$
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est :
+      \( n = c \times x_{max} \)[br/]
+      On obtient donc : $$ X = #snr1# \times \frac{#cp0#}{#cr1#}  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+       <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Il faut d'abord calculer la quantité de matière de dioxygène.[br/]
+      Celui-ci sera le réactif limitant.
+    </help>
+    <img>pile_combustible.gif</img>
+  </problem>
+
+  <problem id='3'>
+    <level>1</level>
+    <context>Le métal magnésium est un puissant réducteur, en réagissant sur le dioxyde de carbone, il le transforme en carbone. [br/][b] #eqe17#[/b] [/b]</context>
+    <question>Quelle est la quantité de matière de magnésium utilisé pour obtenir #np1# moles de carbone ?</question>
+    <calcul>#np1#=round(uniform(5,20),1);#cr0#=!;#cp1#=!;#X#=np1*cr0/cp1</calcul>
+    <solution>Les quantités de matières sont proportionnelles aux coefficients. [br/]
+      Donc la quantité de magnésium #r0# consommé est :
+     $$ X = #snp1# \times \frac{#cr0#}{#cp1#}  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Les quantités de matières sont proportionnelles aux coefficients :
+      $$ \frac{n(#p1#)}{c(#p1#)}=\frac{n(#r0#)}{c(#r0#)} $$
+    </help>
+    <img>magnesium.jpg</img>
+  </problem>
+
+  <problem id='4'>
+    <level>1</level>
+    <context>L'oxyde de cuivre #r0# peut-être réduit par le dihydrogène #r1#.[br/]
+      La réaction produit du cuivre métallique et de l'eau.[br/]
+      L'équation de la réaction est : [b]#eqe18#[/b][/b]</context>
+    <question>On désire obtenir #mp0# g du cuivre, quelle masse de dihydrogène doit-on utiliser ?</question>
+    <calcul>#mp0#=round(uniform(5,20),1);#cr1#=!;#cp0#=!;#Mp0#=!; #Mr1#=!; #np0#=mp0/Mp0; #X#=np0*cr1/cp0</calcul>
+    <solution>On doit calculer la quantité de matière en cuivre.
+      $$ n = \frac{m}{M} = \frac{#mp0#}{#Mp0#} = #snp0# $$
+      On suppose que le dihydrogène #r1# est le réactif limitant. [br/]
+      L'avancement maximal est déterminé par la quantité de cuivre produite :
+      $$ x_{max} = \frac{n}{c} = \frac{#snp0#}{#cp0#} $$
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #r1# est :
+      \( n = c \times x_{max} \)[br/]
+      On obtient donc $$ X = #cr1# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>On doit d'abord calculer la quantité de matière en ammoniac #p0#.[br/]
+      Les quantités de matières sont proportionnelles aux coefficients :
+      $$ \frac{n(#p0#)}{c(#p0#)}=\frac{n(#r1#)}{c(#r1#)} $$
+    </help>
+    <img>cuivre.jpg</img>
+  </problem>
+
+  <problem id='5'>
+    <level>2</level>
+    <context>La réaction du chlorure de calcium avec le nitrate d'argent produit du chlorure d'argent.[br/]
+    Voici l'équation [b]#eqe0#[/b][/b]</context>
+    <question>Quelle est la quantité de matière en chlorure d'argent produite si on utilise #nr0# moles de #r0# et #nr1# moles de #r1#  ?</question>
+    <calcul>#nr0#=round(uniform(1,5),1);#nr1#=round(uniform(1,4),1);#cr0#=!;#cr1#=!;#cp0#=!;#xmax#=!;#X#=xmax*cp0</calcul>
+    <solution>On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal : 
+      $$ {\frac{quantité~matière}{coefficient}} $$
+      Le réactif limitant est #lim# et on obtient x[sub]max[/sub] = #sxmax#. [br/]
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est : 
+      \( n = c \times x_{max} \)[br/]. 
+      On obtient donc $$ X = #cp0# \times #sxmax#  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Il faut d'abord calculer l'avancement maximal. [br/]
+      Les quantités de matières sont proportionnelles aux coefficients. [br/]
+      On peut donc écrire : $$ \frac{quantité~de~matière}{coefficients} =  constante $$
+    </help>
+    <img>argent.jpg</img>
+  </problem>
+
+  <problem id='6'>
+    <level>2</level>
+    <context>L'ammoniac #p0# est utilisé pour fabriquer des engrais.[br/]
+      On l'obtient en faisant réagir du diazote #r0# et du dihydrogène #r1#.[br/]
+      L'équation de la réaction est : [b]#eq9#[/b]</context>
+    <question>Quelle masse de diazote doit-on faire réagir pour fabriquer #mp0# g d'ammoniac ?</question>
+    <calcul>#mp0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mp0#=!; #np0#=mp0/Mp0; #X#=np0*cr0/cp0</calcul>
+    <solution>Il faut d'abord équilibrer l'équation #eqe9#[/b]. [br/]
+      Il faut ensuite calculer la quantité de matière en ammoniac.
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mp0#}{#Mp0#}} = #snp0# $$
+      On suppose que le diazote #r0# est le réactif limitant, l'avancement maximal est déterminé par la quantité d'ammoniac produite
+      $$ x_{max} = \frac{n}{c} = \frac{#snp0#}{#cp0#} $$
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #r0# est :
+      \( n = c \times x_{max} \)[br/]
+      On obtient donc $$ X = #cp0# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Il faut d'abord équilibrer l'équation. [br/]
+      Il faut ensuite calculer la quantité de matière en ammoniac #p0#. [br/]
+      Les quantités de matières sont proportionnelles aux coefficients :
+      $$ \frac{n(#p0#)}{c(#p0#)}=\frac{n(#r0#)}{c(#r0#)} $$
+    </help>
+    <img>nitrate_ammonium.jpg</img>
+  </problem>
+
+  <problem id='7'>
+    <level>2</level>
+    <context>La combustion complète du carbone dans le dioxygène produit du dioxyde de carbone.[br/]
+    L'équation est : [b]#eq21#[/b]</context>
+    <question>Quelle est la quantité de matière en dioxyde de carbone produite si on utilise #nr0# moles de #r0# et #nr1# moles de #r1#  ?</question>
+    <calcul>#nr0#=round(uniform(1,2),1);#nr1#=round(uniform(3,4),1);#cr0#=!;#cr1#=!;#cp0#=!;#xmax#=!;#X#=xmax*cp0</calcul>
+    <solution>On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal :
+       $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Le réactif limitant est le #slim# #lim# et on obtient x[sub]max[/sub] = #xmax# [br/]
+      Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est : 
+      \( n = c \times x_{max} \)[br/]
+      On obtient donc $$ X = #cp0# \times #sxmax#  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Il faut d'abord calculer l'avancement maximal.[br/]
+      Les quantités de matières sont proportionnelles aux coefficients. [br/]
+      On peut donc écrire $$ \frac{quantité~de~matière}{coefficients} =  constante $$
+    </help>
+    <img>carbon.jpg</img>
+  </problem>
+
+  <problem id='8'>
+    <level>2</level>
+    <context>Le propane #r0# est un gaz incolore utilisé comme combustible.[br/]
+      Sa combustion avec le dioxygène produit du dioxyde de carbone et de l'eau.[br/]
+      L'équation de la réaction est : [b]#eq6#[/b]</context>
+    <question>Une bouteille de propane contient 13 kg de gaz. [br/]
+      Quelle masse de dioxyde de carbone peut-on obtenir si on dispose de #nr1# moles de dioxygène ?
+    </question>
+    <calcul>#mr0#=round(uniform(13000,13000),1); #nr1#=round(uniform(50,200),1); #cr0#=!; #cr1#=!; #cp0#=!; #Mr0#=!; #Mp0#=!; #nr0#=mr0/Mr0; #xmax#=!; #X#=Mp0*cp0*xmax</calcul>
+    <solution>
+      Il est nécessaire d'équilibrer l'équation : [b]#eqe6#[/b] [br/]
+      On calcule la quantité de matière en propane.
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# $$
+      On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal 
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avanacement maximal.
+      $$ n = c \times x_{max} = #cp0# \times #xmax# $$ 
+      On obtient la masse en multipliant la quantité de matière par la masse molaire. [br/]
+      On obtient donc $$ X = #Mr0# \times #cr0# \times #xmax#  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      Il est nécessaire d'équilibrer l'équation : [b]#eqe6#[/b] [br/] 
+      On calcule la quantité de matière en propane #r0#. [br/]
+      On cherche l'avancement maximal x[sub]max[/sub]. [br/]
+      Les quantités de matières sont proportionnelles aux coefficients.
+    </help>
+    <img>propane.gif</img>
+  </problem>
+
+  <problem id='9'>
+    <level>2</level>
+    <context>Le permanganate de potassium produit par réaction avec l'acide chlorhydrique un gaz toxique : le dichlore #p3#.[br/]
+      L'équation non équilibrée de la réaction est : [b]#eq1#[/b]</context>
+    <question>Quelle masse de dichlore peut-on obtenir avec #nr0# moles de permanganate et #nr1# moles d'acide ?
+    </question>
+    <calcul>#nr0#=round(uniform(10,100),1); #nr1#=round(uniform(50,200),1); #cr0#=!; #cr1#=!; #cp3#=!; #Mr0#=!; 
+      #Mr1#; #Mp3#=!; #xmax#=!; #np3#=cp3*xmax; #X#=Mp3*np3</calcul>
+    <solution>
+      Il est nécessaire d'équilibrer l'équation : [br/] [b]#eqe1#[/b] [br/]
+      On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal 
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avancement maximal.
+      $$ n = c \times x_{max} = #cp3# \times #sxmax# = #snp3# ~mol$$ 
+      On obtient la masse en multipliant la quantité de matière par la masse molaire. [br/]
+      On obtient donc $$ X = #Mp3# \times #snp3#  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      Il est nécessaire d'équilibrer l'équation :[br/] [b]#eqe1#[/b] [br/]
+      On cherche l'avancement maximal x[sub]max[/sub]. [br/]
+      Les quantités de matières sont proportionnelles aux coefficients, donc $$ n=c \times x_{max} $$
+      On obtient la masse en multipliant la quantité de matière par la masse molaire.
+    </help>
+    <img>chlore.jpg</img>
+  </problem>
+
+  <problem id='10'>
+    <level>3</level>
+    <context>Les ions hydronium #r1# réagissent sur le métal Fer en produisant un dégagement de dihydrogène.[br/]
+      On obtient une solution aqueuse contenant des ions Fer II #p0#.[br/]
+      L'équation de la réaction est : [br/] [b]#eqe14#[/b]</context>
+    <question>Sur un morceau de fer de #mr0# g on verse 50 mL d'une solution d'acide de concentration #tr1# mol/L, quelle masse de dihydrogène doit-on obtenir ?</question>
+    <calcul>#mr0#=round(uniform(5,20),1); #tr1#=round(uniform(0.5,2),1); #Mr0#=!; #cr0#=!; #cr1#=! ;#cp1#=!; #Mp1#=!; #nr1#=0.05*tr1;
+      #nr0#=mr0/Mr0; #xmax#=!; #X#=Mp1*cp1*xmax</calcul>
+    <solution>On doit calculer la quantité de matière en fer.
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# ~mol $$
+      On trouve ensuite la quantité de matière en acide en utilisant la relation 
+      $$ n = \text {concentration molaire} \times \text {volume} = #tr1# \times 0,050 = #snr1# $$
+      On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal :
+       $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Les quantités de matières sont proportionnelles aux coefficients et à l'avancement donc la quantité de #p1# est
+      \( n = c \times x_{max} \)[br/]
+      On obtient enfin la masse en multipliant la quantité de matière par la masse molaire. 
+      On obtient donc $$ X = #Mp1# \times #cp1# \times #sxmax#  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>On doit d'abord calculer la quantité de matière en fer #p0# en divisant la masse par la masse molaire.[br/]
+      On obtient ensuite la quantité de matière en acide par la relation $$quantité~matière=concentration \times volume$$
+      On cherche l'avancement maximal.[br/]
+      Les quantités de matières sont proportionnelles aux coefficients et à l'avancement.[br/]
+      La masse s'obtient en multipliant la quantité de matière par la masse molaire.
+    </help>
+    <img>hydrogen_stars.jpg</img>
+  </problem>
+
+  <problem id='11'>
+    <level>3</level>
+    <context>Les ions hydronium #r1# réagissent sur le métal Fer #sr0# en produisant un dégagement de dihydrogène.[br/]
+      On obtient une solution aqueuse contenant des ions Fer II #p0#.[br/]
+      L'équation de la réaction est : [b]#eqe14#[/b]</context>
+    <question>Quel volume de solution d'acide chlorhydrique de concentration #tr1# mol/L doit-on utiliser pour dissoudre complètement 
+      un morceau de fer de #mr0# g ?</question>
+    <calcul>#mr0#=round(uniform(5,20),1); #tr1#=round(uniform(0.5,2),2); #sr0#=!; #sr1#=!; #Mr0#=!; #cr0#=!; #cr1#=!; #nr0#=mr0/Mr0; #nr1#=nr0*cr1/cr0;
+      #X#=1000*nr1/tr1</calcul>
+    <solution>On doit calculer la quantité de matière en #sr0#.
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# ~mol$$
+      On trouve ensuite la quantité de matière en acide car les quantités de matières sont proportionnelles aux coefficients.
+      $$ {\frac{\text{quantité matière}}{\text {coefficient}}} =  constante $$
+      Enfin on obtient le volume sachant que :
+      $$ volume = \frac{\text {quantité~matière}}{\text{concentration}} =  1000 \times \frac{#snr1#}{#tr1#} =  #X# \approx #sX# ~mL $$
+    </solution>
+    <unite>mL</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>On doit d'abord calculer la quantité de matière en #sr0# #r0# en divisant la masse par la masse molaire.[br/]
+      On obtient ensuite la quantité de matière en acide car $$ \frac{quantité~matière}{coefficient}=constante $$ 
+      On obtient ensuite le volume par la relation $$ V = \frac{n}{C} $$. 
+      Les quantités de matières sont proportionnelles aux coefficients et à l'avancement.[br/]
+      La masse s'obtient en multipliant la quantité de matière par la masse molaire.
+    </help>
+    <img>fer.jpg</img>
+  </problem>
+
+  <problem id='12'>
+    <level>3</level>
+    <context>L'éthanol est un alcool de formule #r0#. Il brûle dans le dioxygène en produisant du dioxyde de carbone et de l'eau.[br/]
+      L'équation de la réaction est : [b]#eqe19#[/b]</context>
+    <question>Quel volume de dioxyde de carbone obtient-on si on brûle #mr0# g d'alcool ?
+      Le volume d'une mole de gaz vaut, dans les conditions de l'expérience, environ 24 L.</question>
+    <calcul>#mr0#=round(uniform(50,200),1); #Mr0#=!; #cr0#=!; #cp0#=!; #nr0#=mr0/Mr0; #np0#=nr0*cp0/cr0;
+      #X#=np0*24</calcul>
+    <solution>On doit calculer la quantité de matière en éthanol.
+      $$ n =\frac{m}{M} = \frac{#mr0#}{#Mr0#} = #snr0# ~mol $$
+      On suppose que l'éthanol est le réactif limitant, par  conséquent, les quantités de matières étant proportionnelles aux coefficients on obtient :
+      $$ \frac{np0}{cp0} = \frac{snr0}{cr0} =  constante $$
+      Enfin on obtient le volume en multipliant la quantité de matière par le volume molaire : 
+      $$ volume = #snp0# \times 24  \approx  #sX# ~L $$
+    </solution>
+    <unite>L</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>On doit d'abord calculer la quantité de matière en #sr0# #r0# en divisant la masse par la masse molaire.[br/]
+      On admet que tout l'éthanol est consommé, on obtient donc la quantité de matière en #sp0# obtenu grâce aux coefficients :
+      $$ n(CO_{2}) = n(éthanol) \times \frac {c(CO_{2})}{c(#sr0#)} $$
+      On obtient ensuite le volume par la relation $$ V = n \times V_m $$. 
+    </help>
+    <img>ethanol.png</img>
+  </problem>
+
+  <problem id='13'>
+    <level>1</level>
+    <context>L'acide sulfurique #r1#   réagit sur le #sr0# #r0# en produisant entre autre du sulfate de sodium #sp1 selon l'équation :
+      [b]#eqe2#[/b]</context>
+    <question>Quelle sera la quantité de matière en #sp1# après réaction de #nr0# moles de chlorure de sodium ?</question>
+    <calcul>#nr0#=round(uniform(50,200),1); #cr0#=!; #cp1#=!; #X#=nr0*cp1/cr0</calcul>
+    <solution>Ici on suppose que tout le chlorure de sodium est consommé.[br/]
+      Par  conséquent, les quantités de matières étant proportionnelles aux coefficients on obtient :
+      $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p1#)}{c(#p1#)} }$$
+      $$ n(#p1#) = #snr0# \times \frac {#cp1#}{#cr0#}  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Les quantités de matières sont proportionnelles aux coefficients.
+      $$ \frac{n(#p1#)}{c(#p1#)}=\frac{n(#r0#)}{c(#r0#)} $$
+    </help>
+    <img>sulfate_sodium.jpg</img>
+  </problem>
+
+  <problem id='14'>
+    <level>1</level>
+    <context>La combustion du méthane gazeux #r0# produit du dioxygène #p0#.[br/]
+    l'équation non équilibrée s'écrit :  [b]#eq3#[/b] </context>
+    <question>Quelle sera la quantité de matière en dioxyde de carbone obtenu après réaction de #nr0# moles de méthane ?</question>
+    <calcul>#nr0#=round(uniform(5,20),2); #cr0#=!; #cp0#=!; #X#=nr0*cp0/cr0</calcul>
+    <solution>Ici on suppose que tout le méthane est consommé.[br/]
+      Par  conséquent, les quantités de matières étant proportionnelles aux coefficients on obtient :
+      $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p0#)}{c(#p0#)} }$$
+      $$ n(#p0#) = #snr0# \times \frac {#cp0#}{#cr0#}  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Les quantités de matières sont proportionnelles aux coefficients
+      $$ \frac{n(#p0#)}{c(#p0#)}=\frac{n(#r0#)}{c(#r0#)} $$
+    </help>
+    <img>combustion.jpg</img>
+  </problem>
+
+  <problem id='15'>
+    <level>1</level>
+    <context>Le métal cuivre subit une oxydation par l'acide nitrique (#r2#,#r1#).[br/]
+      La réaction transforme l'atome de cuivre en ion cuivre #p0#, en oxyde d'azote #p1# et eau.[br/]
+    l'équation équilibrée s'écrit :  [b]#eqe4#[/b] </context>
+    <question>Quelle est la masse en oxyde d'azote obtenu après réaction de #nr0# moles de cuivre ?</question>
+    <calcul>#nr0#=round(uniform(5,20),2); #cr0#=!; #cp1#=!; #Mp1#=!; #X#=Mp1*nr0*cp1/cr0</calcul>
+    <solution>Ici on suppose que tout le cuivre est consommé.
+      On calcule d'abord la quantité de matière en oxyde d'azote. les quantités de matières étant proportionnelles aux coefficients on obtient :
+      $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p1#)}{c(#p1#)} } $$
+      Pour obtenir la masse il faut multiplier la quantité de matière par la masse molaire.
+      $$ m(#p1#) = n(#p1#) \times M(#p1#) = #snr0# \times \frac {#cp1#}{#cr0#} \times #Mp1#  \approx #sX# ~mol $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Les quantités de matières sont proportionnelles aux coefficients.
+      $$ \frac{n(#p1#)}{c(#p1#)}=\frac{n(#r0#)}{c(#r0#)} $$
+      La masse s'obtient grâce à la masse molaire et la quantité de matière.
+    </help>
+    <img>cuivre_piece.jpg</img>
+  </problem>
+
+  <problem id='16'>
+    <level>1</level>
+    <context>L'ammoniac gazeux #r0# brûle dans le dioxygène en produisant de l'oxyde d'azote #p0# et de l'eau.[br/]
+    l'équation équilibrée s'écrit :  [b]#eq10#[/b] </context>
+    <question>Quelle est la masse d'eau obtenue après réaction de #mr0# g d'ammoniac ?</question>
+    <calcul>#mr0#=round(uniform(10,200),1); #cr0#=!; #cp1#=!; #Mr0#=!; #Mp1#=!; #nr0#=mr0/Mr0; #np1#=nr0*(cp1/cr0); #X#=np1*Mp1</calcul>
+    <solution>Ici on suppose que tout l'ammoniac est consommé.[br/]
+      On calcule d'abord la quantité de matière en ammoniac en divisant la masse par la masse molaire.
+      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #nr0# $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en eau :
+      $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p1#)}{c(#p1#)} } $$
+      Pour obtenir la masse il faut multiplier la quantité de matière par la masse molaire.
+      $$ m(#p1#) = n(#p1#) \times M(#p1#) = #snr0# \times \frac {#cp1#}{#cr0#} \times #Mp1#  \approx #sX# ~g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>Les quantités de matières sont proportionnelles aux coefficients
+      $$ \frac{n(#p1#)}{c(#p1#)}=\frac{n(#r0#)}{c(#r0#)} $$
+      La masse s'obtient grâce à la masse molaire et la quantité de matière.
+    </help>
+    <img>ammoniac.png</img>
+  </problem>
+
+  <problem id='17'>
+    <level>2</level>
+    <context>Le propane est un hydrocarbure gazeux de formule #r0#.[br/]
+    On le conditionne en bouteille sous pression. On l'utlise pour le chauffage et la cuisine.[br/]
+    L'équation équilibrée s'écrit :  [b]#eqe6#[/b]</context>
+    <question>On dispose de #mr0# g de propane et de #nr1# moles de dioxygène.[br/]
+      Quelle sera la quantité de matière en #sp1# obtenue ?</question>
+    <calcul>#mr0#=round(uniform(100,500),1); #nr1#=round(uniform(10,50),2); #cr0#=!; #cr1#=!; #cp0#=!; #Mr0#=!; #nr0#=mr0/Mr0; 
+      #xmax#=!; #X#=cp0*xmax</calcul>
+    <solution>On doit calculer la quantité de matière en propane.[br/]
+      On divise la quantité de matière par la masse molaire.[br/]
+      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #nr0# $$
+      On cherche ensuite l'avancement soit avec la tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en #sp0# :
+      $$ n(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On cherche d'abord la quantité de matière en #sr0#.[br/]
+      Puis l'avancement maximal.[br/]
+      Les quantités de matières sont proportionnelles aux coefficients et à l'avancement, donc :
+      $$ n(\text {#sp0#}) = c(\text{#sp0#}) \times x_{max} $$
+    </help>
+    <img>propan.png</img>
+  </problem>
+
+  <problem id='18'>
+    <level>2</level>
+    <context>L'acide sulfurique liquide #r0# est un acide fort.[br/]
+    Il réagit avec l'eau pour former des ions hydronium #p0#.[br/]
+    L'équation équilibrée s'écrit :  [b]#eqe13#[/b]</context>
+    <question>On dispose de #nr0# moles d'acide et de #mr1# moles d'eau.[br/]
+      Quelle sera la quantité de matière en #sp0# obtenue ?</question>
+    <calcul>#nr0#=round(uniform(10,80),2); #mr1#=round(uniform(100,500),1); #cr0#=!; #cr1#=!; #cp0#=!; #Mr1#=!; #nr1#=mr1/Mr1; 
+      #xmax#=!; #X#=cp0*xmax</calcul>
+    <solution>On doit calculer la quantité de matière en eau.[br/] 
+      On divise la quantité de matière par la masse molaire.[br/]
+      $$ n(#r1#) = \frac {m(#r1#)}{M(#r1#)} = \frac {#mr1#}{#Mr1#} = #snr1#  ~mol $$
+      On cherche ensuite l'avancement soit avec la tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en #sp0# :
+      $$ n(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On cherche d'abord la quantité de matière en #sr1#.[br/]
+      Puis l'avancement maximal.[br/]
+      Les quantités de matières sont proportionnelles aux coefficients et à l'avancement, donc :
+      $$ n(\text {#sp0#}) = c(\text{#sp0#}) \times x_{max} $$
+    </help>
+    <img>acid_sulfuric.png</img>
+  </problem>
+
+  <problem id='19'>
+    <level>2</level>
+    <context>L'ion argent #r0# est utilisé comme réactif dans les films photographiques[br/]
+    Il réagit avec l'ion phosphate #r1# et produit un précipité de phosphate d'argent #p0#.[br/]
+    L'équation équilibrée s'écrit :  [b]#eqe16#[/b] [br/]
+    Les quantités de matière initiales sont les suivantes : [ul][li]#r0# : #nr0# mol [/li][li] #r1# : #nr1# mol [/li][li] #p0# :
+      #np0# mol [/li][/ul]</context>
+    <question>
+      Quelle sera la quantité de matière en #sp0# finale ?</question>
+    <calcul>#nr0#=round(uniform(10,80),1); #nr1#=round(uniform(20,200),1); #np0#=round(uniform(5,50),1); #cr0#=!; #cr1#=!; #cp0#=!; 
+      #xmax#=!; #X#=cp0*xmax+np0</calcul>
+    <solution>
+      On cherche l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
+      $$ n_{produite}(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  $$
+      Enfin on [b] ajoute [/b] à la quantité produite [b] la quantité initiale. [/b]
+      $$ n_{finale} = n_{produite} + n_{initiale} \approx #sX# ~mol $$ 
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      Il faut trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+      Sans le tableau, il faut penser à ajouter à la quantité produite par la réaction, la quantité initiale.
+    </help>
+    <img>photo_argentique.jpg</img>
+  </problem>
+
+  <problem id='20'>
+    <level>3</level>
+    <context>L'ion cuivre II #r0# précipite avec l'ion hydroxyde #r1# en formant un beau précipité bleu.[br/]
+    L'équation non équilibrée s'écrit : [br/] [b]#eq15#[/b] [br/]
+    </context>
+    <question>
+      On mélange [ul][li] 
+      #vr0# mL de #sr0# de concentration #tr0# mol.L[sup]-1[/sup] [/li][li] 
+      avec #vr1# mL en #sr1# de concentration #tr1# mol.L[sup]-1[/sup][/li][/ul].[br/]
+      Quelle sera la quantité de matière en #sp0# finale ?
+    </question>
+    <calcul>#vr0#=round(uniform(100,500),1); #tr0#=round(uniform(0.2,2),1); #tr1#=round(uniform(0.40,4),1); #vr1#=round(uniform(50,250),1); #cr0#=!; 
+      #cr1#=!; #cp0#=!; #nr0#=tr0*vr0/1000; #nr1#=tr1*vr1/1000; #xmax#=!; #X#=cp0*xmax</calcul>
+    <solution>
+      Il faut penser à équilibrer l'équation.
+      $$ #eqe15# $$
+      On calcule d'abord les quantités de matière en utilisant la relation 
+      $$ n = concentration \times volume $$
+      [ul][li] \( n(#r0#) = #tr0# \times #vr0#/1000 = #snr0# ~mol/L \) [/li][li]
+      \( n(#r1#) = #tr1# \times #vr1#/1000 = #snr1# ~mol/L \) [/li][/ul] 
+      Il faut faire attention aux unités de volume.[br/]
+      On cherche ensuite l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
+      $$ n_{produite}(\text{#p0#}) = #cp0# \times #sxmax# \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      Il faut penser à équilibrer l'équation.[br/]
+      Il faut calculer les quantité de matière puis trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+    </help>
+    <img>hydroxyde_cuivre.jpeg</img>
+  </problem>
+
+  <problem id='21'>
+    <level>3</level>
+    <context>L'ammoniac gazeux #r0# réagit avec le dioxygène #r1# pour former du monoxyde d'azote #p0# et de la vapeur d'eau.[br/]
+    On suppose que la réaction a lieu dans les conditions normales de température et de pression et donc 
+    que tous les gaz ont un volume molaire égal à 24 L.mol[sup]-1[/sup].[br/]
+    L'équation non équilibrée s'écrit :  [b]#eq10#[/b] [br/]
+    </context>
+    <question>
+      On utilise #vr0# L de #sr0# et #vr1# L de #sr1#. [br/]  
+      Quelle sera la quantité de matière en #sp1# obtenue ?</question>
+    <calcul>#vr0#=round(uniform(10,80),1); #vr1#=round(uniform(20,200),1); #nr0#=vr0/24; #nr1#=vr1/24; #cr0#=!; #cr1#=!; #cp1#=!; 
+      #xmax#=!; #X#=cp1*xmax</calcul>
+    <solution>
+      On doit d'abord équilibrer l'équation.
+      $$ #eqe10# $$
+      On calcule les quantités de matière en divisant les volumes par le volume molaire.
+      $$ n = \frac {\text {volume}}{\text{volume molaire}} $$
+      [ul][li] \( n(#r0#) = \large {\frac{#vr0#}{24}} \normalsize =#snr0#  ~mol \) [/li]
+      [li] \( n(#r1#) = \large {\frac{#vr1#}{24}} \normalsize =#snr1# ~mol \) [/li]
+      On cherche l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# ~mol $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp1# :
+      $$ n_{produite}(\text{#sp1#}) = #cp1# \times #sxmax# \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On doit d'abord équilibrer l'équation.
+      On calcule les quantités de matière en divisant les volumes par le volume molaire.
+      $$ n = \frac {\text {volume}}{\text{volume molaire}}
+      Il faut ensuite trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+    </help>
+    <img>ammoniac.png</img>
+  </problem>
+
+  <problem id='22'>
+    <level>3</level>
+    <context>La réduction de l'oxyde de fer #r1# par le monoxyde de carbone produit du fer.[br/]
+    On suppose que la réaction a lieu dans les conditions normales de température et de pression et donc 
+    que tous les gaz ont un volume molaire égal à 24 L.mol[sup]-1[/sup].[br/]
+    L'équation équilibrée s'écrit :  [b]#eqe11#[/b] [br/]
+    </context>
+    <question>
+      On utilise #vr0# L de #sr0# et #mr1# g de #sr1#. [br/]  
+      Quelle masse de fer peut-on obtenir ?</question>
+    <calcul>#vr0#=round(uniform(10,100),1); #mr1#=round(uniform(20,200),1); #nr0#=vr0/24; #Mr1#=!; #nr1#=mr1/Mr1; #cr0#=!; #cr1#=!; #cp1#=!; 
+      #xmax#=!; #X#=cp1*xmax</calcul>
+    <solution>
+      On calcule la quantité de matière de #r1# en divisant la masse par la masse molaire. [br/]
+      On trouve la quantité de matière de #r0# en utilisant la relation :
+      $$ n = \frac {\text {volume}}{\text{volume molaire}} $$
+      [ul][li] \( n(#r1#) = \large {\frac{#mr1#}{#Mr1#}} \normalsize =#snr1#  ~mol \) [/li]
+      [li] \( n(#r0#) = \large {\frac{#vr0#}{24}} \normalsize =#snr0# ~mol \) [/li]
+      On cherche l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# ~mol $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp1# :
+      $$ n_{produite}(\text{#sp1#}) = #cp1# \times #sxmax# \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On calcule les quantités de matière en divisant les volumes par le volume molaire ou les masses par les masses molaires.
+      Il faut ensuite trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+    </help>
+    <img>oxyde_fer.jpeg</img>
+  </problem>
+
+  <problem id='23'>
+    <level>3</level>
+    <context>La réduction de l'oxyde de cuivre #r1# par le sulfure de cuivre #r0# produit du cuivre en dégageant du dioxyde de soufre gazeux #p1# .[br/]
+    L'équation équilibrée s'écrit :  [b]#eqe12#[/b] [br/]
+    </context>
+    <question>
+      On utilise #nr0# mol de #sr0#. [br/] A la fin de la réaction il reste #mr1# g de de #sr1#. [br/]  
+      Quelle masse initiale d'oxyde de cuivre avait-on au départ ?</question>
+    <calcul>#nr0#=round(uniform(1,10),1); #mr1#=round(uniform(20,200),0); #Mr1#=!; #nr1#=mr1/Mr1; #cr0#=!; #cr1#=!; 
+      #z1#=nr0*cr1/cr0; #z2#=Mr1*z1; #X# = mr1 + z2 </calcul>
+    <solution>
+      L'oxyde de cuivre est le réactif en excès, donc le #sr0# est le réactif limitant.[br/]
+      La quantité de matière de #r1# qui a disparu est :
+      $$ n_{consommée}(#r1#) = #snr0# \times \large {\frac{#cr0#}{#cr1#}} \normalsize =#sz1#  ~mol $$
+      La masse #r1# consommée est donc : \( m = n \times M = #sz1# \times #Mr1# = #sz2# ~g\) [br/]
+      La masse initiale est donc la somme de celle consommée et celle restante.
+      $$ m = #mr1# + #sz2# \approx #sX# ~g $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On calcule les quantités de matière en divisant les volumes par le volume molaire ou les masses par les masses molaires.
+      Il faut ensuite trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+    </help>
+    <img>oxyde_fer.jpeg</img>
+  </problem>
+
+  <problem id='24'>
+    <level>3</level>
+    <context>L'ion cuivre II #r0# précipite avec l'ion hydroxyde #r1# en formant un beau précipité bleu.[br/]
+    L'équation non équilibrée s'écrit : [br/] [b]#eq15#[/b] [br/]
+    </context>
+    <question>
+      On mélange [ul][li] 
+      #vr0# mL de #sr0# de concentration #tr0# mol.L[sup]-1[/sup] [/li][li] 
+      avec #vr1# mL en #sr1# de concentration #tr1# mol.L[sup]-1[/sup][/li][/ul].[br/]
+      Quelle sera la quantité de matière en #sp0# finale ?
+    </question>
+    <calcul>#vr0#=round(uniform(100,500),1); #tr0#=round(uniform(0.2,2),1); #tr1#=round(uniform(0.40,4),1); #vr1#=round(uniform(50,250),1); #cr0#=!; 
+      #cr1#=!; #cp0#=!; #nr0#=tr0*vr0/1000; #nr1#=tr1*vr1/1000; #xmax#=!; #X#=cp0*xmax</calcul>
+    <solution>
+      Il faut penser à équilibrer l'équation.
+      $$ #eqe15# $$
+      On calcule d'abord les quantités de matière en utilisant la relation 
+      $$ n = concentration \times volume $$
+      [ul][li] \( n(#r0#) = #tr0# \times #vr0#/1000 = #snr0# ~mol/L \) [/li][li]
+      \( n(#r1#) = #tr1# \times #vr1#/1000 = #snr1# ~mol/L \) [/li][/ul] 
+      Il faut faire attention aux unités de volume.[br/]
+      On cherche ensuite l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
+      $$ n_{produite}(\text{#p0#}) = #cp0# \times #sxmax# \approx #sX# ~mol $$
+    </solution>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      Il faut penser à équilibrer l'équation.[br/]
+      Il faut calculer les quantité de matière puis trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la réponse.[br/]
+    </help>
+    <img>hydroxyde_cuivre.jpeg</img>
+  </problem>
+
+  <problem id='25'>
+    <level>3</level>
+    <context>Le nitrate d'argent et l'ion phosphate réagissent en formant un précipité de phospate d'argent #sp0# [br/]
+    L'équation équilibrée s'écrit :  [b]#eqe16#[/b] [br/]
+    </context>
+    <question>
+      On utilise #mr0# g de #sr0# et #vr1# mL de #sr1# de concentration molaire #tr1# mol/L. [br/]  
+      Quelle sera la masse du précipité obtenu ?</question>
+    <calcul>#mr0#=round(uniform(10,80),1); #vr1#=round(uniform(200,600),1); #tr1#=round(uniform(0.1,0.8),3); #Mr0#=!;
+      #nr0#=mr0/Mr0; #nr1#=tr1*vr1/1000; #cr0#=!; #cr1#=!; #cp0#=!; #Mp0#=!; #xmax#=!; #np0#=cp0*xmax; #X#=Mp0*np0</calcul>
+    <solution>
+      On calcule la quantités de matière en #r0# en divisant la masse par la masse molaire :
+      $$ n(#r0#) = \large \frac {\text {masse}}{\text{masse molaire}} = \frac{#mr0#}{#Mr0#} \normalsize = #snr0# ~mol$$
+      La quantité de matière en #r1# s'obtient en multipliant la concentration par le volume : 
+      $$ n(#r1#) = \text {concentration} \times \text{volume} = #tr1# \times \large \frac{#vr1#}{1000} \normalsize = #snr1# ~mol$$
+      On cherche l'avancement soit avec le tableau soit en cherchant le rapport minimum :
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# ~mol $$
+      Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
+      $$ n_{produite}(\text{#sp0#}) = #cp0# \times #sxmax# = #snp0# ~mol $$
+      Enfin on multiplie par la masse molaire pour obtenir la masse :
+      $$ m = #sMp0# \times #snp0# \approx #sX# ~ g $$
+    </solution>
+    <unite>g</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Le résultat manque de précision !</feedback>
+      <feedback id="3" type="false">Ce n'est pas ça ! Cliquez sur le bouton AIDE</feedback>
+    </feedback>
+    <help>
+      On calcule les quantités de matière en soit avec la masse molaire soit avec la concentration et le volume. [br/]
+      Il faut ensuite trouver l'avancement maximal.[br/]
+      Le tableau d'avancement permet de trouver la quantité de matière obtenue.[br/]
+      Enfin pour avoir la masse, il faut tenir compte de la masse molaire.
+    </help>
+    <img>nitrate_argent.png</img>
+  </problem>
+    
+
+</problems>

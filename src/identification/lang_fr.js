@@ -1,0 +1,41 @@
+const ID_TITRE = " Identification"
+const ID_INFO = " Veuillez vous identifier ou vous inscrire : "
+const ID_LABEL_NOM = " Nom :"
+const ID_HOLDER_NOM = " 'Inscrire votre identifiant.'  "
+const ID_HOLDER_PWD = " 'Indiquer le mot de passe' "
+const ID_FEEDBACK_NOM = " Le nom doit comporter au moins 6 caractères "
+const ID_LABEL_PASS = " Mot de passe :"
+const ID_FEEDBACK_PASS = " Le mot de passe doit contenir entre 6 et 15 symboles. "
+const ID_FEEDBACK_VPASS = " Les mot de passe ne correspondent pas. "
+const ID_LABEL_VERIF_PASS = "Vérification du mot de passe :"
+const ID_BT_VALID = "Se Connecter"
+const ID_BT_INSCRIPTION = "S'inscrire"
+const ID_IDENT_SUCCESS_FEEDBACK = "Félicitations, vous avez été identifié."
+const ID_IDENT_ERROR_FEEDBACK = "Désolé, l'authentification a echoué !"
+const ID_INSC_SUCCESS_FEEDBACK = "Félicitations, vous êtes inscrit et identifié."
+const ID_INSC_ERROR_FEEDBACK = "Désolé, l'inscription a echoué !"
+const ID_CONN_TITRE = "Connexion ou Inscription"
+const ID_CONN_LABEL_IDENT = "Connexion"
+const ID_CONN_LABEL_INSC = "Inscription"
+const ID_MAIL_LABEL = "Adresse Mail : "
+const ID_MAIL_FEEDBACK = "L'adresse saisie n'est pas correcte."
+const ID_RECOVER = "Vous avez oublié votre mot de passe ?"
+const ID_NO_RECOVER = "Finalement je m'en souviens !"
+const ID_RECOVER_LABEL = "Saisissez votre adresse mail, un courriel vous sera adressé. "
+const ID_BT_RECOVER = "Envoyer"
+const ID_MAIL_SUBJECT = "Avancement-Recuperation"
+const ID_MAIL_TITLE = "Avancement - Récupération du mot de passe"
+const ID_MAIL_MESSAGE_1 = "Vous recevez ce message car vous avez oublié le mot de passe de l'application. "
+const ID_MAIL_MESSAGE_2 = "Veuillez vous reconnecter avec le mot de passe indiqué ci-dessous. "
+const ID_MAIL_MESSAGE_3 = "Il est recommandé de le modifier une fois identifié. "
+const ID_MAIL_MESSAGE_4 = "Mot de passe : "
+const ID_RECOVER_ERR_ADDRESS = "Aucun utilisateur avec cette adresse mail !"
+
+const ID_RECOVER_SUCCESS_FEEDBACK = "Le message vient d'être expédié"
+const ID_RECOVER_ERROR_FEEDBACK = "Une erreur n'a pas permis d'envoyer le message"
+
+module.exports = {ID_TITRE, ID_INFO, ID_LABEL_NOM, ID_LABEL_PASS, ID_HOLDER_NOM, ID_LABEL_VERIF_PASS, ID_FEEDBACK_PASS,
+ID_FEEDBACK_NOM, ID_BT_VALID, ID_HOLDER_PWD, ID_BT_INSCRIPTION, ID_IDENT_SUCCESS_FEEDBACK, ID_IDENT_ERROR_FEEDBACK,
+ID_INSC_SUCCESS_FEEDBACK, ID_INSC_ERROR_FEEDBACK, ID_CONN_TITRE, ID_CONN_LABEL_INSC, ID_CONN_LABEL_IDENT, ID_MAIL_LABEL, ID_MAIL_FEEDBACK,
+ID_RECOVER, ID_RECOVER_LABEL, ID_BT_RECOVER, ID_NO_RECOVER, ID_MAIL_SUBJECT, ID_RECOVER_ERROR_FEEDBACK, 
+ID_RECOVER_SUCCESS_FEEDBACK, ID_MAIL_MESSAGE_1, ID_MAIL_MESSAGE_2, ID_MAIL_MESSAGE_3, ID_MAIL_TITLE, ID_RECOVER_ERR_ADDRESS, ID_MAIL_MESSAGE_4}
