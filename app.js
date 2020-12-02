@@ -8,7 +8,7 @@ const http = require( 'http' )
 var server = http.createServer( app )
 var io = require( 'socket.io' )( server )
 
-require( 'src/dispatcher.js' )
+require( './src/dispatcher.js' )
 dispatcher( io )
 
 app.use( express.static( __dirname + '/views' ) );
