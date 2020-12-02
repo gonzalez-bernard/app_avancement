@@ -2,7 +2,7 @@ var {
     PythonShell
 } = require('python-shell')
 var options = {
-    scriptPath: '',
+    scriptPath: './src/',
     mode: 'json'
 }
 
