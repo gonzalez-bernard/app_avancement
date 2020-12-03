@@ -4,6 +4,7 @@ Module Equation
 
 import csv
 import math
+import lxml
 import numpy as np
 import settings
 
