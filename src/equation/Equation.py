@@ -10,7 +10,7 @@ import settings
 
 import src.py.constantes as cst
 from src.py.utils import getFilePath
-
+import os
 
 class Equations:
     """Classe Equations
@@ -29,7 +29,9 @@ class Equations:
     Returns:
         None:
     """
-    FILE_EQUATIONS = getFilePath(cst.FILE_EQUATIONS, cst.FILE_ROOT) + "/" + cst.FILE_EQUATIONS
+
+    
+    FILE_EQUATIONS = getFilePath(cst.FILE_EQUATIONS, os.path.abspath(os.getcwd())) + "/" + cst.FILE_EQUATIONS
 
     def __init(self):
         pass

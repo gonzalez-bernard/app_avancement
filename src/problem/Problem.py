@@ -2,6 +2,7 @@
 Class Problem
 """
 import re
+import os
 from random import randrange, uniform
 import xmltodict
 
@@ -100,7 +101,7 @@ class Problem:
         Args:
             level (int, optional): niveau de difficulté
         """
-        with open(getFilePath(cst.FILE_PROBLEMS, cst.FILE_ROOT) + "/" + cst.FILE_PROBLEMS, 'r') as fd:
+        with open(getFilePath(cst.FILE_PROBLEMS, os.path.abspath(os.getcwd())) + "/" + cst.FILE_PROBLEMS, 'r') as fd:
             data = xmltodict.parse(fd.read())
             lst = data['problems']['problem']
             tab = []
