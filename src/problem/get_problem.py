@@ -3,8 +3,8 @@ Récupération problème
 """
 import json
 import sys
-import src.settings
-from src.problem.Problem import Problem
+import settings
+from problem.Problem import Problem
 
 _pb = Problem()
 
