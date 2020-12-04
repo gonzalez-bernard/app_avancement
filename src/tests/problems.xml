@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem id='1'>
+    <level>1</level>
+    <context>Ceci est le contexte avec l'équation #eqe3#</context>
+    <question>Quantité de matière produite avec #mr0# g de #r0# et #mr1# g du réactif #r1#  ?</question>
+    <solution>[p]On doit d'abord convertir les masses en quantité de matière selon la formule :
+      \(n = \Large{\frac{masse}{Masse~molaire}}\)[/p]
+      [p]On obtient donc n(#r0#)=#nr0# et n(#r1#)=#nr1#[/p]
+      [p]On recherche l'avancement maximal x[sub]max[/sub]} en trouvant le rapport minimal \(\Large{\frac{quantité~matière}{coefficient}}\)[/p]
+      [p]On obtient x[sub]max[/sub] = #xmax#[/p]
+      [p]Les quantités de matières sont proportionnelles aux coefficients donc la quantité obtenue du réactif #r1# est
+      \(n = c \times x_{max}\). On obtient donc X = #cr1#*#xmax# soit #X# moles[/p]
+    </solution>
+    <calcul>#mr0#=uniform(1,2);#mr1#=uniform(3,4);#cr0#=!;#cr1#=!;#Mr0#=!;#Mr1#=!;#nr0#=mr0/Mr0;#nr1#=mr1/Mr1;#xmax#=!;#X#=xmax*cr1</calcul>
+    <unite>mol</unite>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Il y une erreur !</feedback>
+      <feedback id="3" type="false">Ce n'est pas encore ça...</feedback>
+      <feedback id="4" type="false">Cliquez sur le bouton AIDE...</feedback>
+    </feedback>
+    <help>[p]Les quantités de matières sont proportionnelles aux coefficients.[/p]
+      [p]On peut donc écrire \(\Large{\frac{quantité~de~matière}{coefficients}} = constante\)[/p]
+    </help>
+    <unit>mol</unit>
+  </problem>
+  <problem id='2'>
+    <level>2</level>
+    <context>Ceci est le contexte avec l'équation #eq4#</context>
+    <question>Quelle est la quantité de matière minimale nécessaire du réactif #r1# en moles pour consommer intégralement #nr0# moles de #r0# ?</question>
+    <unite>g</unite>
+    <solution>La quantité minimale nécessaire du réactif #r1# est de #X# moles
+Les quantités de matières sont proportionnelles aux coefficients.
+donc #X# = nr0*cr1/cr0</solution>
+    <calcul>#nr0#=uniform(0.1,2);#nr1#=uniform(0.3,4);#cr0#=!;#cr1#=!;#X#=nr0*cr1/cr0</calcul>
+    <feedback>
+      <feedback id="1" type="true">Bonne réponse</feedback>
+      <feedback id="2" type="false">Il y a une erreur !</feedback>
+      <feedback id="3" type="false">Ce n'est pas encore ça...</feedback>
+    </feedback>
+    <help> Les quantités de matières sont proportionnelles aux coefficients.
+      On peut donc écrire $$\frac{quantite matiere}{coefficients} = constante$$
+    </help>
+    <unit>mol</unit>
+  </problem>
+</problems>

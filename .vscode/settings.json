@@ -1,0 +1,8 @@
+{
+  "python.pythonPath": "venv/bin/python",
+  "githubPullRequests.remotes": [
+    "origin",
+    "upstream",
+    " vscode://vscode.github-authentication/did-authenticate?windowid=1&code=5f312b61498cfb6afba9&state=be3c40ad-52ba-4d49-9d3f-ac621a73665c "
+  ]
+}
