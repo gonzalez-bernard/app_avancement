@@ -6,7 +6,6 @@ from bokeh.transform import linear_cmap
 from bokeh.palettes import Spectral6
 import json
 import sys
-import src.settings
 
 # définition des données
 args = sys.stdin.readlines()
