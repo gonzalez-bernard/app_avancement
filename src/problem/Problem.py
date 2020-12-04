@@ -387,7 +387,7 @@ class Problem:
             dic['slim'] = self.values['oxmax']['slim']
         return dic
 
-    # Programme Principal
+    # Programme Principal getProblem
     def getProblem(self, level=None):
         """Programme principal
 
