@@ -1,4 +1,4 @@
-import {FOOTER} from "../constantes.js"
+import { FOOTER } from "../constantes.js"
 import * as txt from "./lang_fr.js"
 
 const EQ_HTML_COEFFS_ERROR_FEEDBACK =
@@ -11,7 +11,7 @@ const EQ_HTML_COEFFS_SUCCESS_FEEDBACK =
 
 // Page principale
 const EQ_HTML_EQUATION = "<div class='title'><h3>" + txt.EQ_EQUATION_TITRE + "</h3></div><br/>" +
-  "<div class='container-fluid'><div class='row'><div class='col-lg-6'>" +
+  "<div class='container-fluid'><div class='row'><div class='col-lg-8'>" +
   "<p>" + txt.EQ_EQUATION_OBJECTIF + "</p>" +
   "<form id = 'eq_frm_equation' action = '#' class = 'form-horizontal' novalidate > " +
   "<div class='form-group'>" +

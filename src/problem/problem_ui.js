@@ -90,15 +90,16 @@ var init_problem = function() {
       for ( let key in eq.reactifs ) {
         r = eq.reactifs[ key ][ 0 ].toString()
         m = eq.massesmolaires[ indice++ ]
-
-        mmol += r.substring( 0, r.lastIndexOf( "(" ) ) + ": " + m.toString() + " - "
+        r = r.substring( 0, r.lastIndexOf( "(" ) )
+        mmol += "<span class='mmol'>" + r + " : " + m.toString() + "</span>"
       }
       for ( let key in eq.produits ) {
         r = eq.produits[ key ][ 0 ].toString()
         m = eq.massesmolaires[ indice++ ]
-        mmol += r.substring( 0, r.lastIndexOf( "(" ) ) + ": " + m.toString() + " - "
+        mmol += "<span class='mmol'>" + r.substring( 0, r.lastIndexOf( "(" ) ) + " : " + m.toString() + "</span>"
       }
-      mmol = mmol.substring( 0, mmol.length - 3 )
+      console.log( mmol )
+        //mmol = mmol.substring( 0, mmol.length - 3 )
 
       // initialise l'affichage du problème
       let html = msg.PB_ENONCE( data[ 'id' ], data[ 'niveau' ],
@@ -112,8 +113,7 @@ var init_problem = function() {
       $( "#pb_container_buttons_problem" ).show()
       valeur = data[ 'valeur' ]
 
-      sessionStorage.setItem( 'problem', JSON.stringify(
-        data ) )
+      sessionStorage.setItem( 'problem', JSON.stringify( data ) )
       feedback = data[ 'feedback' ]
       let help = data[ 'help' ]
       solution = data[ 'solution' ]

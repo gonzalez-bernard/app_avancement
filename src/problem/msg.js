@@ -1,18 +1,3 @@
-import {
-  PB_BT_ADD_PBS,
-  PB_BT_ADD_PBD,
-  PB_BT_ADD_PBM,
-  PB_BT_HELP,
-  PB_BT_VALID,
-  PB_BT_RESULT,
-  PB_FEEDBACK,
-  PB_INTRO,
-  PB_TITRE,
-  PB_PLACEHOLDER,
-  PB_NUMBER,
-  PB_LABEL_REPONSE
-} from "./lang_fr.js"
-
 import * as txt from "./lang_fr.js"
 
 import { FOOTER } from "../constantes.js"
@@ -74,7 +59,8 @@ const PB_REPONSE = function( unite ) {
 const PB_ENONCE = function( id, niveau, context, question, img, mmol ) {
   let html_img = ''
   if ( img != 'Null' ) {
-    html_img = "<img id='pb_img' width = '100%' style='max-height:150px' class='image-fluid rounded' src = 'src/resources/img/" + img + "'/>"
+    html_img = "<img id='pb_img' width = 'auto' style='max-height:200px' class='image-fluid rounded'" +
+      " src = 'src/resources/img/" + img + "' / > "
   }
   let html = "<div class='container-fluid'><div class='row'><div class='col' style='min-width:70%'><h4>" +
     txt.PB_NUMBER + id + " ( niveau : " + niveau + " )</h4>"
