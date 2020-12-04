@@ -36,7 +36,7 @@ def formatSignificatif(number, precision):
 
     def _get_digits(valeur , precision, sup):
         """
-       Formate une nombre en tenant compte du nombre de chiffres significatifs.
+       Formate un nombre en tenant compte du nombre de chiffres significatifs.
        Le nombre ne comporte pas de zéros à gauche.
        Le programme se charge d'math_arrondir si le chiffre après la précision est supérieur ou égal à 5
        Si la précision est supérieur au nombre de chiffres significatifs le programme complète avec des zéros
@@ -52,7 +52,7 @@ def formatSignificatif(number, precision):
             return valeur
         # si précision supérieur on complète avec des zéros à droite
         elif precision > l:
-            f = '{:0<' + precision + 'd}'
+            f = '{:0<' + str(precision) + 'd}'
             return f.format(valeur)
         # on va tronquer valeur
         else:
