@@ -136,12 +136,12 @@
     <calcul>#mp0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mp0#=!; #np0#=mp0/Mp0; #X#=np0*cr0/cp0</calcul>
     <solution>Il faut d'abord équilibrer l'équation #eqe9#[/b]. [br/]
       Il faut ensuite calculer la quantité de matière en ammoniac.
-      $$ n~=~{\frac{m}{M}}~=~{\frac{#mp0#}{#Mp0#}} = #snp0# $$
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mp0#}{#Mp0#}} = #snp0# ~mol $$
       On suppose que le diazote #r0# est le réactif limitant, l'avancement maximal est déterminé par la quantité d'ammoniac produite
       $$ x_{max} = \frac{n}{c} = \frac{#snp0#}{#cp0#} $$
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #r0# est :
       \( n = c \times x_{max} \)[br/]
-      On obtient donc $$ X = #cp0# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
+      On obtient donc $$ m = #cp0# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
     </solution>
     <unite>g</unite>
     <feedback>
@@ -168,7 +168,7 @@
       Le réactif limitant est le #slim# #lim# et on obtient x[sub]max[/sub] = #xmax# [br/]
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est : 
       \( n = c \times x_{max} \)[br/]
-      On obtient donc $$ X = #cp0# \times #sxmax#  \approx #sX# ~mol $$
+      On obtient donc $$ n = #cp0# \times #sxmax#  \approx #sX# ~mol $$
     </solution>
     <unite>mol</unite>
     <feedback>
@@ -195,13 +195,13 @@
     <solution>
       Il est nécessaire d'équilibrer l'équation : [b]#eqe6#[/b] [br/]
       On calcule la quantité de matière en propane.
-      $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# $$
+      $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# ~mol $$
       On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal 
       $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
       Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avanacement maximal.
-      $$ n = c \times x_{max} = #cp0# \times #xmax# $$ 
+      $$ n = c \times x_{max} = #cp0# \times #sxmax# $$ 
       On obtient la masse en multipliant la quantité de matière par la masse molaire. [br/]
-      On obtient donc $$ X = #Mr0# \times #cr0# \times #xmax#  \approx #sX# ~g $$
+      On obtient donc $$ m = #Mr0# \times #cr0# \times #sxmax#  \approx #sX# ~g $$
     </solution>
     <unite>g</unite>
     <feedback>
@@ -231,7 +231,7 @@
       On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal 
       $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
       Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avancement maximal.
-      $$ n = c \times x_{max} = #cp3# \times #sxmax# = #snp3# ~mol$$ 
+      $$ n = c \times x_{max} = #cp3# \times #sxmax# = #snp3# ~mol $$ 
       On obtient la masse en multipliant la quantité de matière par la masse molaire. [br/]
       On obtient donc $$ X = #Mp3# \times #snp3#  \approx #sX# ~g $$
     </solution>
@@ -424,7 +424,7 @@
     <calcul>#mr0#=round(uniform(10,200),1); #cr0#=!; #cp1#=!; #Mr0#=!; #Mp1#=!; #nr0#=mr0/Mr0; #np1#=nr0*(cp1/cr0); #X#=np1*Mp1</calcul>
     <solution>Ici on suppose que tout l'ammoniac est consommé.[br/]
       On calcule d'abord la quantité de matière en ammoniac en divisant la masse par la masse molaire.
-      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #nr0# $$
+      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #snr0# ~mol $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en eau :
       $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p1#)}{c(#p1#)} } $$
       Pour obtenir la masse il faut multiplier la quantité de matière par la masse molaire.

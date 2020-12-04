@@ -3,8 +3,9 @@ Avancement
 """
 import sys
 import json
-import settings
-# import py.constantes as cts
+import src.settings
+
+import src.py.constantes as cts
 from src.equation.Equation import Equation
 
 

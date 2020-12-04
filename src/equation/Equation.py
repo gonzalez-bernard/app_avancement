@@ -5,7 +5,7 @@ Module Equation
 import csv
 import math
 import numpy as np
-import settings
+#import settings
 
 import src.py.constantes as cst
 from src.py.utils import getFilePath
@@ -375,7 +375,7 @@ class Equation:
     def get_equation_equilibree(self):
         """Retourne équation équilibrée
 
-        Returns:
+        Returns
             str: équation
         """
         equ = ""
@@ -415,11 +415,10 @@ class Equation:
                 bool: Vrai si charge non nulle
             """
             charge = False
-            for i in range(1, 3):
-                for reactifs in self.reactifs:
-                    if reactifs[1] != 0:
-                        charge = True
-                        break
+            for reactifs in self.reactifs:
+                if reactifs[1] != 0:
+                    charge = True
+                    break
 
             return charge
 

@@ -143,7 +143,7 @@ def scinotation2latex(nombre):
         return nombre
     x[1] = x[1].replace('+','')
     x[1] = x[1].lstrip('0')
-    return x[0] + "\\text{ x }10^{" + x[1] + "}"
+    return x[0] + "\\times 10^{" + x[1] + "}"
 
 def get_random_pwd(size = 12):
     import random

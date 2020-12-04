@@ -6,10 +6,11 @@ import os
 from random import randrange, uniform
 import xmltodict
 
-import settings
+#import settings
 import src.py.constantes as cst
 from src.equation.Equation import Equations
 from src.py.utils import getFilePath, formatSignificatif, get_digits, scinotation2latex
+
 
 
 class Problem:
@@ -77,6 +78,7 @@ class Problem:
 
     def __init__(self):
         self.lst_problems = []  # liste des problèmes
+        self.level = 0
         self.problem = None
         self.context = None
         self.question = None
@@ -288,8 +290,6 @@ class Problem:
                         self.values['slim'] = grandeur['slim']
                     locals()[nom] = grandeur['valeur']
 
-            self.values['sX'] = scinotation2latex(self.values['sX'])
-
         for e in self.attributes:
             self.values[e] = _get_especes(e)
 
@@ -344,7 +344,7 @@ class Problem:
             str: text modifié
         """
         attributes = Problem.R_REPLACE.findall(text)
-        for key, elt in enumerate(attributes):
+        for elt in attributes:
             if elt[0:3] == 'eqe':
                 text = text.replace('#' + elt + '#', str(self.equation.equation_equilibree))
             elif elt[0:2] == 'eq':
