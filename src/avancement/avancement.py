@@ -3,7 +3,6 @@ Avancement
 """
 import sys
 import json
-import src.settings
 
 import src.py.constantes as cts
 from src.equation.Equation import Equation
