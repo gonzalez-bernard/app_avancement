@@ -545,7 +545,7 @@ class Equation:
             for k in formule.keys():
                 _masse += formule[k] * cst.MASSES_MOLAIRES[k]
 
-            return _masse
+            return round(_masse,1)
 
         reac = self.reactifs
         prod = self.produits

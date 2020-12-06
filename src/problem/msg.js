@@ -59,12 +59,12 @@ const PB_REPONSE = function( unite ) {
 const PB_ENONCE = function( id, niveau, context, question, img, mmol ) {
   let html_img = ''
   if ( img != 'Null' ) {
-    html_img = "<img id='pb_img' width = 'auto' style='max-height:200px' class='image-fluid rounded'" +
+    html_img = "<img id='pb_img' width = 'auto' style='max-width:200px' class='image-fluid rounded'" +
       " src = 'src/resources/img/" + img + "' / > "
   }
-  let html = "<div class='container-fluid'><div class='row'><div class='col' style='min-width:70%'><h4>" +
+  let html = "<div class='container-fluid'><div class='row'><div class='col col-lg-9' style='min-width:70%'><h4>" +
     txt.PB_NUMBER + id + " ( niveau : " + niveau + " )</h4>"
-  html += context + "<b><br/><br/>" + question + "</b><br/><br/><hr/><p class='info1'>Masses Molaires (g/mol)</p>"
+  html += context + "<b><br/>" + question + "</b><br/><br/><hr/><p class='info1'>Masses Molaires (g/mol)</p>"
   html += "<div id='pb_massesmolaires'>" + mmol + "</div></div>"
   html += "<div class='col'><a href='#' id ='pb_zoom'><img src='src/resources/img/zoom-in.png' width='50px' alt='' /></a>"
   html += html_img + "</div></div></div><hr/>"

@@ -86,17 +86,20 @@ var init_problem = function() {
       let mmol = ""
       let eq = JSON.parse( lst_equations[ data[ 'id_eq' ] ] )
       let indice = 0
+
+      // affichage des masses molaires
       let r, m
       for ( let key in eq.reactifs ) {
         r = eq.reactifs[ key ][ 0 ].toString()
         m = eq.massesmolaires[ indice++ ]
         r = r.substring( 0, r.lastIndexOf( "(" ) )
-        mmol += "<span class='mmol'>" + r + " : " + m.toString() + "</span>"
+        mmol += "<span class='mmol'>" + r + " : " + m.toFixed( 1 ).toString() + "</span>"
       }
       for ( let key in eq.produits ) {
         r = eq.produits[ key ][ 0 ].toString()
         m = eq.massesmolaires[ indice++ ]
-        mmol += "<span class='mmol'>" + r.substring( 0, r.lastIndexOf( "(" ) ) + " : " + m.toString() + "</span>"
+        mmol += "<span class='mmol'>" + r.substring( 0, r.lastIndexOf( "(" ) ) + " : " +
+          m.toFixed( 1 ).toString() + "</span>"
       }
       console.log( mmol )
         //mmol = mmol.substring( 0, mmol.length - 3 )

@@ -5,6 +5,7 @@ import re
 import os
 from random import randrange, uniform
 import xmltodict
+import json
 
 #import settings
 import src.py.constantes as cst
@@ -238,6 +239,38 @@ class Problem:
             Initialise la structure self.calcul {'identifiant': valeur,...}
 
             """
+
+            def _analyse_molaire(nom):
+                indice = int(nom[2]) if nom[1] == 'r' else int(nom[2]) + \
+                        len(self.equation.reactifs)
+                grandeur['valeur'] = self.equation.massesmolaires[indice]
+                grandeur['precision'] = 3
+                grandeur['valeur_app'] = formatSignificatif(grandeur['valeur'],3, 'latex')
+          
+            def _analyse_coefficients(nom):
+                indice = int(nom[2]) if nom[1] == 'r' else int(nom[2]) + \
+                    len(self.equation.reactifs)
+                grandeur['valeur'] = self.equation.coeffs[indice]
+                grandeur['precision'] = 0
+                grandeur['valeur_app'] = str(grandeur['valeur'])
+                              
+            def _analyse_calcul(elt):
+                precision = self.get_precision(elt[1], grandeur['valeur'])
+                grandeur['precision'] = precision
+                if precision > 0:
+                    grandeur['valeur_app'] = formatSignificatif(grandeur['valeur'], precision, 'latex')
+                else:
+                    v = round(grandeur['valeur'],0)
+                    grandeur['valeur_app'] = str(v)
+
+            def _init_values():
+                    self.values['o' + nom] = grandeur
+                    self.values[nom] = grandeur['valeur']
+                    self.values['s' + nom] = grandeur['valeur_app']
+                    if 'lim' in grandeur.keys():
+                        self.values['lim'] = grandeur['lim']
+                        self.values['slim'] = grandeur['slim']
+ 
             attributes = Problem.R_ANALYSE.findall(self.problem['calcul'])
             precision = None
 
@@ -246,49 +279,42 @@ class Problem:
             for elt in attributes:
                 grandeur = {}
                 nom = elt[0]
-                if nom[0] == 'M':  # masses molaires
-                    indice = int(nom[2]) if nom[1] == 'r' else int(nom[2]) + \
-                        len(self.equation.reactifs)
-                    grandeur['valeur'] = self.equation.massesmolaires[indice]
-                    grandeur['precision'] = 3
-                    grandeur['valeur_app'] = formatSignificatif(grandeur['valeur'],3)
-                elif nom[0] == 'c':  # coefficients
-                    indice = int(nom[2]) if nom[1] == 'r' else int(nom[2]) + \
-                        len(self.equation.reactifs)
-                    grandeur['valeur'] = self.equation.coeffs[indice]
-                    grandeur['precision'] = 0
-                    grandeur['valeur_app'] = str(grandeur['valeur'])
+
+                # masses molaires
+                if nom[0] == 'M':  
+                    _analyse_molaire(nom)
+
+                # coefficients
+                elif nom[0] == 'c':  
+                    _analyse_coefficients(nom)
+
+                # xmax
                 elif nom == 'xmax':
                     grandeur['valeur'], grandeur['lim'], grandeur['slim'], \
                         grandeur['precision'] = self.calc_xmax()
-                    grandeur['valeur_app'] = formatSignificatif(grandeur['valeur'], precision)
-
+                    grandeur['valeur_app'] = formatSignificatif(grandeur['valeur'], \
+                        grandeur['precision'])
+                
+                # ne pas traiter
                 elif nom[0] == 's':
                     pass
                 else:
-                    if elt[1] == '?':  # valeurs aléatoires
+
+                    # valeur par défaut
+                    if elt[1] == '?':  
                         if nom[0] == 'n':
                             grandeur['valeur'] = round(uniform(0.1, 5), 3)
                         else:
                             grandeur['valeur'] = round(uniform(1, 50), 2)
+                    
+                    # valeur calculée
                     else:
                         grandeur['valeur'] = eval(elt[1])
-                        precision = self.get_precision(elt[1], grandeur['valeur'])
-                        grandeur['precision'] = precision
-                        if precision > 0:
-                            grandeur['valeur_app'] = \
-                                formatSignificatif(grandeur['valeur'], precision)
-                        else:
-                            grandeur['valeur_app'] = str(round(grandeur['valeur'],0))
-
+                        _analyse_calcul(elt)
+                
                 if nom[0] != 's':
-                    self.values['o' + nom] = grandeur
-                    self.values[nom] = grandeur['valeur']
-                    self.values['s' + nom] = grandeur['valeur_app']
-                    if 'lim' in grandeur.keys():
-                        self.values['lim'] = grandeur['lim']
-                        self.values['slim'] = grandeur['slim']
-                    locals()[nom] = grandeur['valeur']
+                    _init_values()
+                    locals()[nom] = grandeur['valeur']                    
 
         for e in self.attributes:
             self.values[e] = _get_especes(e)
@@ -397,8 +423,9 @@ class Problem:
         Returns:
             None:
         """
+
         self.get_problems(level)
-        self.get_problem()
+        self.get_problem(8)
         self.id_equation = self.get_indice_equation()
         self.get_equation(self.id_equation)
         self.get_attributes()

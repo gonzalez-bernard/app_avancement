@@ -8,11 +8,11 @@
     <question>Quelle est la quantité de matière en dioxyde de carbone produite si #mr0# g de méthane #r0# a été consommé ?</question>
     <calcul>#mr0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mr0#=!;#nr0#=mr0/Mr0;#X#=nr0*cp0/cr0</calcul>
     <solution>Il faut d'abord calculer la quantité de matière de méthane : 
-      $$ n=\frac{m}{M}=\frac{#smr0#}{#Mr0#} = #snr0# $$
+      $$ n=\frac{m}{M}=\frac{#smr0#}{#Mr0#} = #snr0# ~mol $$
       Le méthane #r0# est le réactif limitant, donc $$ x_{max} = \frac{n}{c} = \frac{#snr0#}{#cr0#} $$
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est :
       \( n = c \times x_{max} \)[br/]
-      On obtient donc $$ X = #snr0# \times \frac{#cp0#}{#cr0#} = #X# \approx #sX# ~moles $$
+      On obtient donc $$ n = #snr0# \times \frac{#cp0#}{#cr0#} = #X# \approx #sX# ~mol $$
     </solution>
     <unite>mol</unite>
     <feedback>
@@ -33,7 +33,7 @@
     <question>Quelle est la quantité de matière d'eau produite si #mr1# g de dioxygène #r1# a été consommé ?</question>
     <calcul>#mr1#=round(uniform(50,200),1);#cr1#=!;#cp0#=!;#Mr1#=!;#nr1#=mr1/Mr1;#X#=nr1*cp0/cr1</calcul>
     <solution>Il faut d'abord équilibrer l'équation #eqe20#[/b].[br/]
-      Puis calculer la quantité de matière de dioxygène : $$ n=\frac{m}{M}=\frac{#mr1#}{#Mr1#} = #snr1# $$
+      Puis calculer la quantité de matière de dioxygène : $$ n=\frac{m}{M}=\frac{#mr1#}{#Mr1#} = #snr1# ~mol $$
       Le dioxygène #r1# est le réactif limitant, donc $$ x_{max} = \frac{n}{c} = \frac{#snr1#}{#cr1#} $$
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #p0# est :
       \( n = c \times x_{max} \)[br/]
@@ -78,15 +78,18 @@
       La réaction produit du cuivre métallique et de l'eau.[br/]
       L'équation de la réaction est : [b]#eqe18#[/b][/b]</context>
     <question>On désire obtenir #mp0# g du cuivre, quelle masse de dihydrogène doit-on utiliser ?</question>
-    <calcul>#mp0#=round(uniform(5,20),1);#cr1#=!;#cp0#=!;#Mp0#=!; #Mr1#=!; #np0#=mp0/Mp0; #X#=np0*cr1/cp0</calcul>
+    <calcul>#mp0#=round(uniform(5,20),1);#cr1#=!;#cp0#=!;#Mp0#=!; #Mr1#=!; #np0#=mp0/Mp0; #nr1#= cr1*np0/cp0;
+    #X#=nr1*Mr1</calcul>
     <solution>On doit calculer la quantité de matière en cuivre.
-      $$ n = \frac{m}{M} = \frac{#mp0#}{#Mp0#} = #snp0# $$
+      $$ n = \frac{m}{M} = \frac{#mp0#}{#Mp0#} = #snp0# ~mol $$
       On suppose que le dihydrogène #r1# est le réactif limitant. [br/]
       L'avancement maximal est déterminé par la quantité de cuivre produite :
       $$ x_{max} = \frac{n}{c} = \frac{#snp0#}{#cp0#} $$
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #r1# est :
       \( n = c \times x_{max} \)[br/]
-      On obtient donc $$ X = #cr1# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
+      On obtient donc $$ n(#r1#) = #cr1# \times \frac{#snp0#}{#cp0#} = #snr1# ~mol $$
+      Pour obtenir la masse on multiplie par la masse molaire :
+      $$ m = #snr1# \times #Mr1# \approx #sX#  ~g $$ 
     </solution>
     <unite>g</unite>
     <feedback>
@@ -133,7 +136,8 @@
       On l'obtient en faisant réagir du diazote #r0# et du dihydrogène #r1#.[br/]
       L'équation de la réaction est : [b]#eq9#[/b]</context>
     <question>Quelle masse de diazote doit-on faire réagir pour fabriquer #mp0# g d'ammoniac ?</question>
-    <calcul>#mp0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mp0#=!; #np0#=mp0/Mp0; #X#=np0*cr0/cp0</calcul>
+    <calcul>#mp0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mp0#=!; #Mr0#=!; #np0#=mp0/Mp0; #nr0#=np0*cr0/cp0;
+    #X# = nr0*Mr0</calcul>
     <solution>Il faut d'abord équilibrer l'équation #eqe9#[/b]. [br/]
       Il faut ensuite calculer la quantité de matière en ammoniac.
       $$ n~=~{\frac{m}{M}}~=~{\frac{#mp0#}{#Mp0#}} = #snp0# ~mol $$
@@ -141,7 +145,9 @@
       $$ x_{max} = \frac{n}{c} = \frac{#snp0#}{#cp0#} $$
       Les quantités de matières sont proportionnelles aux coefficients donc la quantité de #r0# est :
       \( n = c \times x_{max} \)[br/]
-      On obtient donc $$ m = #cp0# \times \frac{#snp0#}{#cp0#}  \approx #sX# ~g $$
+      On obtient donc $$ n = #cr0# \times \frac{#snp0#}{#cp0#}  \approx #snr0# ~mol $$
+      Pour obtenir la masse on doit multiplier par la masse molaire :
+      $$ m = #snr0# \times #Mr0# \approx #sX# ~g $$
     </solution>
     <unite>g</unite>
     <feedback>
@@ -191,17 +197,18 @@
     <question>Une bouteille de propane contient 13 kg de gaz. [br/]
       Quelle masse de dioxyde de carbone peut-on obtenir si on dispose de #nr1# moles de dioxygène ?
     </question>
-    <calcul>#mr0#=round(uniform(13000,13000),1); #nr1#=round(uniform(50,200),1); #cr0#=!; #cr1#=!; #cp0#=!; #Mr0#=!; #Mp0#=!; #nr0#=mr0/Mr0; #xmax#=!; #X#=Mp0*cp0*xmax</calcul>
+    <calcul>#mr0#=round(uniform(13000,13000),1); #nr1#=round(uniform(50,200),1); #cr0#=!; 
+    #cr1#=!; #cp0#=!; #Mr0#=!; #Mp0#=!; #nr0#=mr0/Mr0; #xmax#=!; #np0# = cp0*xmax; #X#=Mp0*np0</calcul>
     <solution>
       Il est nécessaire d'équilibrer l'équation : [b]#eqe6#[/b] [br/]
       On calcule la quantité de matière en propane.
       $$ n~=~{\frac{m}{M}}~=~{\frac{#mr0#}{#Mr0#}} = #snr0# ~mol $$
       On recherche l'avancement maximal x[sub]max[/sub] en trouvant le rapport minimal 
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
-      Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avanacement maximal.
-      $$ n = c \times x_{max} = #cp0# \times #sxmax# $$ 
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = \frac{#nr1#}{#cr1#}=#sxmax# $$
+      Les quantités de matières sont proportionnelles aux coefficients et fonction de l'avancement maximal.
+      $$ n = c \times x_{max} = #cp0# \times #sxmax# = #snp0# ~mol $$ 
       On obtient la masse en multipliant la quantité de matière par la masse molaire. [br/]
-      On obtient donc $$ m = #Mr0# \times #cr0# \times #sxmax#  \approx #sX# ~g $$
+      On obtient donc $$ m = #Mr0# \times #snp0#  \approx #sX# ~g $$
     </solution>
     <unite>g</unite>
     <feedback>
@@ -326,7 +333,7 @@
     <solution>On doit calculer la quantité de matière en éthanol.
       $$ n =\frac{m}{M} = \frac{#mr0#}{#Mr0#} = #snr0# ~mol $$
       On suppose que l'éthanol est le réactif limitant, par  conséquent, les quantités de matières étant proportionnelles aux coefficients on obtient :
-      $$ \frac{np0}{cp0} = \frac{snr0}{cr0} =  constante $$
+      $$ \frac{n(#p0#)}{#cp0#} = \frac{#snr0#}{#cr0#} =  constante $$
       Enfin on obtient le volume en multipliant la quantité de matière par le volume molaire : 
       $$ volume = #snp0# \times 24  \approx  #sX# ~L $$
     </solution>
@@ -401,7 +408,7 @@
       On calcule d'abord la quantité de matière en oxyde d'azote. les quantités de matières étant proportionnelles aux coefficients on obtient :
       $$ {\frac{n(#r0#)}{c(#r0#)} = \frac{n(#p1#)}{c(#p1#)} } $$
       Pour obtenir la masse il faut multiplier la quantité de matière par la masse molaire.
-      $$ m(#p1#) = n(#p1#) \times M(#p1#) = #snr0# \times \frac {#cp1#}{#cr0#} \times #Mp1#  \approx #sX# ~mol $$
+      $$ m(#p1#) = n(#p1#) \times M(#p1#) = #snr0# \times \frac {#cp1#}{#cr0#} \times #Mp1#  \approx #sX# ~g $$
     </solution>
     <unite>g</unite>
     <feedback>
@@ -454,9 +461,9 @@
       #xmax#=!; #X#=cp0*xmax</calcul>
     <solution>On doit calculer la quantité de matière en propane.[br/]
       On divise la quantité de matière par la masse molaire.[br/]
-      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #nr0# $$
+      $$ n(#r0#) = \frac {m(#r0#)}{M(#r0#)} = \frac {#mr0#}{#Mr0#} = #snr0# ~mol $$
       On cherche ensuite l'avancement soit avec la tableau soit en cherchant le rapport minimum :
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en #sp0# :
       $$ n(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  \approx #sX# ~mol $$
     </solution>
@@ -488,7 +495,7 @@
       On divise la quantité de matière par la masse molaire.[br/]
       $$ n(#r1#) = \frac {m(#r1#)}{M(#r1#)} = \frac {#mr1#}{#Mr1#} = #snr1#  ~mol $$
       On cherche ensuite l'avancement soit avec la tableau soit en cherchant le rapport minimum :
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) \approx #sxmax# $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière en #sp0# :
       $$ n(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  \approx #sX# ~mol $$
     </solution>
@@ -517,12 +524,12 @@
     <question>
       Quelle sera la quantité de matière en #sp0# finale ?</question>
     <calcul>#nr0#=round(uniform(10,80),1); #nr1#=round(uniform(20,200),1); #np0#=round(uniform(5,50),1); #cr0#=!; #cr1#=!; #cp0#=!; 
-      #xmax#=!; #X#=cp0*xmax+np0</calcul>
+      #xmax#=!; #z#=round(cp0*xmax,1); #X#=cp0*xmax+np0</calcul>
     <solution>
       On cherche l'avancement soit avec le tableau soit en cherchant le rapport minimum :
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
-      $$ n_{produite}(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax#  $$
+      $$ n_{produite}(\text{#sp0#}) = c(\text{#sp0#}) \times x_{max} = #cp0# \times #sxmax# = #z# ~mol $$
       Enfin on [b] ajoute [/b] à la quantité produite [b] la quantité initiale. [/b]
       $$ n_{finale} = n_{produite} + n_{initiale} \approx #sX# ~mol $$ 
     </solution>
@@ -554,15 +561,14 @@
     <calcul>#vr0#=round(uniform(100,500),1); #tr0#=round(uniform(0.2,2),1); #tr1#=round(uniform(0.40,4),1); #vr1#=round(uniform(50,250),1); #cr0#=!; 
       #cr1#=!; #cp0#=!; #nr0#=tr0*vr0/1000; #nr1#=tr1*vr1/1000; #xmax#=!; #X#=cp0*xmax</calcul>
     <solution>
-      Il faut penser à équilibrer l'équation.
-      $$ #eqe15# $$
+      Il faut penser à équilibrer l'équation : [br/ ] [b]#eqe15#[/b]
       On calcule d'abord les quantités de matière en utilisant la relation 
       $$ n = concentration \times volume $$
       [ul][li] \( n(#r0#) = #tr0# \times #vr0#/1000 = #snr0# ~mol/L \) [/li][li]
       \( n(#r1#) = #tr1# \times #vr1#/1000 = #snr1# ~mol/L \) [/li][/ul] 
       Il faut faire attention aux unités de volume.[br/]
       On cherche ensuite l'avancement soit avec le tableau soit en cherchant le rapport minimum :
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
       $$ n_{produite}(\text{#p0#}) = #cp0# \times #sxmax# \approx #sX# ~mol $$
     </solution>
@@ -593,8 +599,7 @@
     <calcul>#vr0#=round(uniform(10,80),1); #vr1#=round(uniform(20,200),1); #nr0#=vr0/24; #nr1#=vr1/24; #cr0#=!; #cr1#=!; #cp1#=!; 
       #xmax#=!; #X#=cp1*xmax</calcul>
     <solution>
-      On doit d'abord équilibrer l'équation.
-      $$ #eqe10# $$
+      On doit d'abord équilibrer l'équation : [br/] [b]#eqe10#[/b] [br/] 
       On calcule les quantités de matière en divisant les volumes par le volume molaire.
       $$ n = \frac {\text {volume}}{\text{volume molaire}} $$
       [ul][li] \( n(#r0#) = \large {\frac{#vr0#}{24}} \normalsize =#snr0#  ~mol \) [/li]
@@ -665,12 +670,12 @@
     <question>
       On utilise #nr0# mol de #sr0#. [br/] A la fin de la réaction il reste #mr1# g de de #sr1#. [br/]  
       Quelle masse initiale d'oxyde de cuivre avait-on au départ ?</question>
-    <calcul>#nr0#=round(uniform(1,10),1); #mr1#=round(uniform(20,200),0); #Mr1#=!; #nr1#=mr1/Mr1; #cr0#=!; #cr1#=!; 
+    <calcul>#nr0#=round(uniform(0.1,1),2); #mr1#=round(uniform(20,200),0); #Mr1#=!; #nr1#=mr1/Mr1; #cr0#=!; #cr1#=!; 
       #z1#=nr0*cr1/cr0; #z2#=Mr1*z1; #X# = mr1 + z2 </calcul>
     <solution>
       L'oxyde de cuivre est le réactif en excès, donc le #sr0# est le réactif limitant.[br/]
       La quantité de matière de #r1# qui a disparu est :
-      $$ n_{consommée}(#r1#) = #snr0# \times \large {\frac{#cr0#}{#cr1#}} \normalsize =#sz1#  ~mol $$
+      $$ n_{consommée}(#r1#) = #snr0# \times \large {\frac{#cr1#}{#cr0#}} \normalsize =#sz1#  ~mol $$
       La masse #r1# consommée est donc : \( m = n \times M = #sz1# \times #Mr1# = #sz2# ~g\) [br/]
       La masse initiale est donc la somme de celle consommée et celle restante.
       $$ m = #mr1# + #sz2# \approx #sX# ~g $$
@@ -700,18 +705,18 @@
       avec #vr1# mL en #sr1# de concentration #tr1# mol.L[sup]-1[/sup][/li][/ul].[br/]
       Quelle sera la quantité de matière en #sp0# finale ?
     </question>
-    <calcul>#vr0#=round(uniform(100,500),1); #tr0#=round(uniform(0.2,2),1); #tr1#=round(uniform(0.40,4),1); #vr1#=round(uniform(50,250),1); #cr0#=!; 
+    <calcul>#vr0#=round(uniform(100,500),1); #tr0#=round(uniform(0.1,1),2); #tr1#=round(uniform(0.1,1),2); #vr1#=round(uniform(50,250),1); #cr0#=!; 
       #cr1#=!; #cp0#=!; #nr0#=tr0*vr0/1000; #nr1#=tr1*vr1/1000; #xmax#=!; #X#=cp0*xmax</calcul>
     <solution>
       Il faut penser à équilibrer l'équation.
-      $$ #eqe15# $$
-      On calcule d'abord les quantités de matière en utilisant la relation 
-      $$ n = concentration \times volume $$
+      [br/][b]#eqe15#[/b][br/]
+      On calcule d'abord les quantités de matière en utilisant la relation : 
+      \( n = concentration \times volume \)
       [ul][li] \( n(#r0#) = #tr0# \times #vr0#/1000 = #snr0# ~mol/L \) [/li][li]
       \( n(#r1#) = #tr1# \times #vr1#/1000 = #snr1# ~mol/L \) [/li][/ul] 
       Il faut faire attention aux unités de volume.[br/]
       On cherche ensuite l'avancement soit avec le tableau soit en cherchant le rapport minimum :
-      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) $$
+      $$ x_{max}=min \left( \frac{quantité~matière}{coefficient},... \right) = #sxmax# $$
       Ensuite les quantités de matières étant proportionnelles aux coefficients on obtient la quantité de matière produite en #sp0# :
       $$ n_{produite}(\text{#p0#}) = #cp0# \times #sxmax# \approx #sX# ~mol $$
     </solution>

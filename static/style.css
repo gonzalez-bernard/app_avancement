@@ -4,7 +4,7 @@ html {
 
 h3 {
     padding-left: 2px;
-    color: #bd2130;
+    color: #bed650;
 }
 
 .title {
@@ -45,7 +45,7 @@ footer {
 .font-solution {
     font-style: italic;
     font-family: Mathjax Tex;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 #title-bar {

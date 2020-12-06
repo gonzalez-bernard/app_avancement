@@ -25,98 +25,66 @@ def getFilePath(fichier, rep):
             if chemin:
                 return chemin
 
-def formatSignificatif(number, precision):
+def formatSignificatif(number, precision, mode = 'e'):
     """
     formate un nombre avec un nombre de chiffres significatifs    
     
-    Arguments:
+    Args:
         nombre {float} -- nombre à formater
         precision {int} -- nombre de chiffres significatifs
+        mode {str} -- indique si on doit utiliser l'affichage scientifique xxey ou Latex 
+
+    Returns:
+        float nombre formaté en décimal si possible sinon en notation scientifique)
+        Le nombre est renvoyé sans traitement si precision est négative ou nulle
+        ou False si erreur 
     """
+    def _get_digit(number):
+        """Analyse le nombre
 
-    def _get_digits(valeur , precision, sup):
+        Args:
+            number (float): nombre à analyser
+
+        Returns:
+            tuple (nombre avant point, nombre après, nombre de zéros après le point)
         """
-       Formate un nombre en tenant compte du nombre de chiffres significatifs.
-       Le nombre ne comporte pas de zéros à gauche.
-       Le programme se charge d'math_arrondir si le chiffre après la précision est supérieur ou égal à 5
-       Si la précision est supérieur au nombre de chiffres significatifs le programme complète avec des zéros
-       :param valeur: (str) nombre à formater
-       :param precision: (int) nombre de chiffres significatifs
-       :param sup: (bool) indique si le nombre à gauche est nul (False) ou > 0 (True)
-       :return: (str) chaîne formatée
-        """
+        # on cherche les nombres avant et après le point
+        s = str(number).split('.')
 
-        l = len(valeur)
-        # si longueur identique
-        if precision == l:
-            return valeur
-        # si précision supérieur on complète avec des zéros à droite
-        elif precision > l:
-            f = '{:0<' + str(precision) + 'd}'
-            return f.format(valeur)
-        # on va tronquer valeur
-        else:
-            # on doit découper la chaine pour exclure les zéros en début
-            motif = re.compile(r'(0*)(\d*)')
-            x = motif.findall(valeur)[0]
+        # pas de chiffres après le point ou zéros
+        if len(s) == 1 or  int(s[1]) == 0:
+            return(s[0], 0, 0)
+        
+        # on cherche le nombre de zéros après le point
+        n_zeros = -1
+        _number = float("0."+s[1])
+        while _number<1:
+            _number = _number * 10
+            n_zeros = n_zeros + 1
+        return(s[0],s[1],n_zeros)
 
-            # si le nombre est < 1 (sup = False), on ne compte pas les zéros à gauche
-            if not sup:
-                # on travaille sur x[1]
-                # on vérifie longueur de chaîne
-                if precision > len(x[1]):
-                    # on complète avec des zéros
-                    f = '{:0<' + precision + 'd}'
-                    return f.format(valeur)
-                elif precision == len(x[1]):
-                    # on retourne la valeur
-                    return valeur
-                else:
-                    # on cherche si dernier digit >= 5
-                    d = int(x[1][precision])
-                    v = str(int(x[1][:precision]) + 1) if d >= 5 else str(int(x[1][:precision]))
-
-                    # on retourne le résultat
-                    return x[0]+v
-
-            # nombre supérieur à 1
-            else:
-                # les zéros de la partie décimale compte, la precision a été réduite du nombre de digits avant virgule
-                # precision peut être nul
-                # On calcule le nombre de chiffres non nuls à conserver
-                p = precision - len(x[0])
-
-                # si p < 0 on retourne uniquement les zéros
-                if p <= 0:
-                    return x[0][:precision]
-                else:
-                    d = int(x[1][:precision])
-                    v = str(int(x[1][:p]) + 1) if d >= 5 else x[1][:p]
-                    return x[0] + v
-
+    digits = _get_digit(number)
     if precision <= 0:
-        return number
-    nombre = format(number,'.10f')
-    s = str(nombre).split('.')
-
-    # si le nombre est inférieur à 1, donc commence par zéro
-    if s[0] == '0':
-        return '0.' + _get_digits(s[1], precision, False)
-    # Le nombre à gauche n'est pas nul
+        x = number
     else:
-        p = precision - len(s[0])
-        if p < 0:
-            # notation scientifique
-            f = "{:." + str(precision - 1) + "E}"
-            x = f.format(number)
-            return scinotation2latex(x)
-        elif p == 0:
-            f = '{:' + str(precision) + '.0f}'
-            return f.format(number)
+        # on calcule le nombre de chiffres à garder à droite
+        nc = precision - len(digits[0])
+        if digits[0] == "0":
+            nc = nc + 1 + digits[2]
+        if nc > 0:
+            f = "{:."+str(nc)+"f}"
+            x = f.format(round(number,nc))
+        elif nc == 0:
+            x = str(int(round(number,nc)))
         else:
-            # on doit vérifier si la première décimale est > 5
-            return s[0] + "." + _get_digits(s[1], p, True)
+            f = "{:."+str(precision-1)+"e}"
+            x = f.format(number)
+            if mode != 'e':
+                x = scinotation2latex(x)
+            
+    return x
 
+ 
 def get_digits(nombre):
     """
     Compte le nombre de chiffres significatifs.

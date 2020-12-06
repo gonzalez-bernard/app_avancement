@@ -1,5 +1,5 @@
-import py.utils as utils
+import src.py.utils as utils
 
-x = 0.2625
-z = (utils.formatSignificatif(x,2))
+x = 10
+z = utils.formatSignificatif(x,3)
 print(z)
