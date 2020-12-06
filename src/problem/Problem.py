@@ -425,7 +425,7 @@ class Problem:
         """
 
         self.get_problems(level)
-        self.get_problem(8)
+        self.get_problem()
         self.id_equation = self.get_indice_equation()
         self.get_equation(self.id_equation)
         self.get_attributes()
