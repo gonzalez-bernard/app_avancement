@@ -4,6 +4,8 @@ html {
 
 h3 {
     padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: #bed650;
 }
 
@@ -29,7 +31,8 @@ footer {
     font-family: sans-serif;
     font-style: italic;
     font-size: 0.8em;
-    padding-left: 0.4em
+    padding-left: 0.4em;
+    padding: 0.5em;
 }
 
 .footer {
@@ -168,4 +171,18 @@ input[type=password] {
 
 .mmol {
     margin-right: 2em;
+}
+
+.icon {
+    margin: 1em;
+    background-color: #E4EFFF;
+    border: 1px solid #9FC6FF;
+    padding: 5px;
+    /*arrondir les coins en haut à gauche et en bas à droite*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
 }
