@@ -101,13 +101,11 @@ var init_problem = function() {
         mmol += "<span class='mmol'>" + r.substring( 0, r.lastIndexOf( "(" ) ) + " : " +
           m.toFixed( 1 ).toString() + "</span>"
       }
-      console.log( mmol )
-        //mmol = mmol.substring( 0, mmol.length - 3 )
 
       // initialise l'affichage du problème
       let html = msg.PB_ENONCE( data[ 'id' ], data[ 'niveau' ],
-        data[ 'context' ], data[ 'question' ], data[
-          'img' ], mmol )
+        data[ 'context' ], data[ 'question' ], data[ 'img' ], mmol )
+      console.log( "img=" + data[ 'img' ] )
       $( "#pb_enonce" ).html( html )
 
       html = msg.PB_REPONSE( data[ 'unite' ] )
