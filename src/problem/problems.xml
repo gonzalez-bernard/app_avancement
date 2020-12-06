@@ -3,7 +3,7 @@
 
   <problem id='1'>
     <level>1</level>
-    <context>La combustion complète du méthane dans le dioxygène produit du dioxyde de carbone et de la vapeur d'eau.[br/]
+    <context>La combustion complète du méthane dans le dioxygène produit du dioxyde de carbone et aussi de la vapeur d'eau.[br/]
     On peut résumer cette réaction par l'équation : [br/] [b]#eqe3#[/b][/b]</context>
     <question>Quelle est la quantité de matière en dioxyde de carbone produite si #mr0# g de méthane #r0# a été consommé ?</question>
     <calcul>#mr0#=round(uniform(5,20),1);#cr0#=!;#cp0#=!;#Mr0#=!;#nr0#=mr0/Mr0;#X#=nr0*cp0/cr0</calcul>
