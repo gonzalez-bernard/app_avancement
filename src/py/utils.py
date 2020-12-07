@@ -114,6 +114,14 @@ def scinotation2latex(nombre):
     return x[0] + "\\times 10^{" + x[1] + "}"
 
 def get_random_pwd(size = 12):
+    """Génère un mot de passe aléatoire
+    
+    Args:
+        size: taille du mot de passe (default: {12})
+    
+    Returns:
+        {str} mot de passe
+    """
     import random
     element = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-*/~$%&.:?!"
     passwd = ""

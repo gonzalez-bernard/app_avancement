@@ -10,7 +10,6 @@ import sys
 # définition des données
 args = sys.stdin.readlines()
 data = json.loads(args[0])[0]
-
 especes = data['especes']
 
 data_x = [[x] for x in especes ]
