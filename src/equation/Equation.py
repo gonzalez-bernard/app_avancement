@@ -7,7 +7,6 @@ import math
 import numpy as np
 import os
 import sys
-#import settings
 
 sys.path.append(os.getcwd())
 

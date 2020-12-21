@@ -9,7 +9,6 @@ import xmltodict
 import json
 sys.path.append(os.getcwd())
 
-#import settings
 import src.py.constantes as cst
 from src.equation.Equation import Equations
 from src.py.utils import getFilePath, formatSignificatif, get_digits, scinotation2latex
