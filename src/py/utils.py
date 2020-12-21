@@ -27,7 +27,8 @@ def getFilePath(fichier, rep):
 
 def formatSignificatif(number, precision, mode = 'e'):
     """
-    formate un nombre avec un nombre de chiffres significatifs    
+    formate un nombre avec un nombre de chiffres significatifs
+    version : 2.0  
     
     Args:
         nombre {float} -- nombre à formater
