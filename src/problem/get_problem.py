@@ -4,7 +4,7 @@ Récupération problème
 import json
 import sys
 
-from src.problem.Problem import Problem
+from Problem import Problem
 
 _pb = Problem()
 

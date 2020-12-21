@@ -3,9 +3,11 @@ Class Problem
 """
 import re
 import os
+import sys
 from random import randrange, uniform
 import xmltodict
 import json
+sys.path.append(os.getcwd())
 
 #import settings
 import src.py.constantes as cst

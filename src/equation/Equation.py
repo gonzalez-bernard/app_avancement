@@ -5,11 +5,15 @@ Module Equation
 import csv
 import math
 import numpy as np
+import os
+import sys
 #import settings
+
+sys.path.append(os.getcwd())
 
 import src.py.constantes as cst
 from src.py.utils import getFilePath
-import os
+
 
 class Equations:
     """Classe Equations

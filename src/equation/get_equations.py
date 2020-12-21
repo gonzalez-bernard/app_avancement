@@ -6,6 +6,7 @@ import sys
 import json
 import settings
 
+
 from Equation import Equations
 e = Equations()
 
