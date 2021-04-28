@@ -17,7 +17,7 @@ import {EQ_HTML_PRINCIPE, EQ_BT_HTML_AFFICHER, EQ_BT_HTML_METHODE, EQ_BT_HTML_VA
   EQ_HTML_FEEDBACK, EQ_HTML_EQUILIBRAGE, EQ_HTML_EQUATION, EQ_HTML_COEFFS, EQ_HTML_COEFFS_ERROR_FEEDBACK, 
   EQ_HTML_COEFFS_SUCCESS_FEEDBACK} from "./msg.js"
 
-import {FOOTER} from "../constantes.js"
+import {FOOTER} from "../environnement/constantes.js"
 import {EQ_COEFFS_SUCCESS_FEEDBACK, EQ_COEFFS, EQ_FEEDBACK, EQ_EQUILIBRAGE, EQ_EQUILIBRAGE_TEXT1, EQ_EQUILIBRAGE_TEXT2, 
   EQ_BT_EQUILIBRAGE_CLOSE, EQ_LABEL_SELECT, EQ_COEFFS_SUCCESS_FEEDBACK_} from "./lang_fr.js"
 
@@ -26,7 +26,7 @@ import {init_avancement} from  '../avancement/avancement_ui.js'
 //var socket = io();
 var current_equation
 var eq_num_test = 0 // nombre de test
-
+var socket = io()
 
 // Appel au serveur pour récupérer liste des équations
 let getEquations = function() {
@@ -196,7 +196,7 @@ let set_lstEquations = function( data ) {
 }
 
 // Initialisation de la liste des équations
-socket.on( 'getEquations_ok', function(data ) {
+socket.on( 'getEspeces_ok', function(data ) {
   set_lstEquations( data )
 } )
 

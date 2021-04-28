@@ -1,6 +1,5 @@
-var {
-  PythonShell
-} = require( 'python-shell' )
+var {PythonShell} = require( 'python-shell' )
+
 var options = {
   scriptPath: './src/',
   mode: 'json'
@@ -11,15 +10,18 @@ dispatcher = function( io ) {
   io.on( 'connection', function( socket ) {
 
     // Message initialisation du serveur et connexion
-    welcome = { 'titre': 'Welcome' }
+    let welcome = { 'titre': 'Welcome' }
     socket.emit( 'welcome', JSON.stringify( welcome ) );
 
     socket.on( 'welcome_ok', function( msg ) {
       console.log( msg );
     } );
+    
+    var pyshell
 
     // Récupération des équations
     socket.on( 'getEquations', function( msg ) {
+      // @ts-ignore
       pyshell = new PythonShell( './equation/get_equations.py', options );
       pyshell.send( JSON.stringify( {} ) );
       pyshell.on( 'message', function( message ) {
@@ -34,6 +36,7 @@ dispatcher = function( io ) {
 
     // calcul avancement
     socket.on( 'calcAvancement', function( data ) {
+      // @ts-ignore
       pyshell = new PythonShell( './avancement/avancement.py', options );
       pyshell.send( data );
       pyshell.on( 'message', function( message ) {
@@ -47,6 +50,7 @@ dispatcher = function( io ) {
 
     // affichage graphe
     socket.on( 'dspEvolution', function( data ) {
+      // @ts-ignore
       pyshell = new PythonShell( './evolution/evolution.py', options );
       pyshell.send( data );
       pyshell.on( 'message', function( data ) {
@@ -59,6 +63,7 @@ dispatcher = function( io ) {
 
     // problèmes
     socket.on( 'dspProblem', function( data ) {
+      // @ts-ignore
       pyshell = new PythonShell( './problem/get_problem.py', options );
       pyshell.send( data );
       pyshell.on( 'message', function( data ) {
@@ -71,4 +76,4 @@ dispatcher = function( io ) {
   } )
 }
 
-//module.exports = {dispatcher}
+export {dispatcher}

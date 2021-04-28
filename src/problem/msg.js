@@ -1,6 +1,6 @@
 import * as txt from "./lang_fr.js"
 
-import { FOOTER } from "../constantes.js"
+import { FOOTER } from "../environnement/constantes.js"
 
 const PB_ALERT_ERROR =
   "<div id='pb_alert_error' class='alert alert-danger alert-dismissible' style='display:none'>" +

@@ -1,4 +1,4 @@
-import {FOOTER} from '../constantes.js'
+import {FOOTER} from '../environnement/constantes.js'
 import * as txt from "./lang_fr.js"
 
 import {EV_TITRE, EV_INTRO, EV_BT_AIDE, EV_AIDE_T1, EV_AIDE_T2, EV_AIDE_T3, EV_AIDE_T4} from "./lang_fr.js"

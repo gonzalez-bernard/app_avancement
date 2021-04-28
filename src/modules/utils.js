@@ -248,6 +248,8 @@ var math_arrondir = function(nombre, precision) {
 }
 
 
+
+
 export {
     dsp_html_latex,
     dsp_modal_info,

@@ -1,4 +1,4 @@
-import {FOOTER} from '../constantes.js'
+import {FOOTER} from '../environnement/constantes.js'
 import * as txt from "./lang_fr.js"
 
 import {TB_TITRE, TB_TITRE_TABLE, TB_INIT, TB_ALERT_QI, TB_ALERT_QC, TB_ALERT_QF, TB_ALERT_QFX, TB_LABEL_QC, 

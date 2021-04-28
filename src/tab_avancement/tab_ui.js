@@ -2,7 +2,7 @@
 FONCTIONS :
 -init_tableau : initialisation
  */
-import {FOOTER} from '../constantes.js'
+import {FOOTER} from '../environnement/constantes.js'
 
 import {TB_TITRE, TB_ALERT_QF, TB_ALERT_QFX, TB_BT_PROGRESS, TB_BT_HELPAVANCEMENT, TB_HTML_INFO, TB_LIMITANT_TEXT1, 
   TB_LIMITANT_TEXT2, TB_LIMITANT, TB_BT_LIMITANT_CLOSE} from "./lang_fr.js"

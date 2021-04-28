@@ -1,8 +1,6 @@
-import {FOOTER} from "../constantes.js"
+import {FOOTER} from "../environnement/constantes.js"
 import * as txt from "./lang_fr.js"
-import {AV_BT_VALID, AV_BT_TAB, AV_TITRE, AV_INTRO, AV_INFO, AV_UNITE_TITRE, AV_UNITE_LABEL_MOL, 
-    AV_UNITE_LABEL_G, AV_TITRE_ESPECE, AV_QUANTITE_MOL, AV_QUANTITE_G, AV_QUANTITE_REST_MOL, AV_QUANTITE_REST_G,} 
-    from "./lang_fr.js"
+
 
 const AV_HTML_INTRO = "<div class='title'><h3>" + txt.AV_TITRE + "</h3></div><br/>" + "<p>" + txt.AV_INTRO + "</p>"
 

@@ -1,4 +1,4 @@
-import { FOOTER } from "../constantes.js"
+import { FOOTER } from "../environnement/constantes.js"
 import * as txt from "./lang_fr.js"
 
 const EQ_HTML_COEFFS_ERROR_FEEDBACK =

@@ -1,4 +1,4 @@
-import {FOOTER, SUFFIXE_LANG} from "../constantes.js"
+import {FOOTER, SUFFIXE_LANG} from "../environnement/constantes.js"
 
 var path_lang = "./lang_" + SUFFIXE_LANG + ".js";
 import * as txt from "./lang_fr.js"

@@ -1,4 +1,4 @@
-var cts = require( "../constantes.js" )
+var cts = require( "../environnement/constantes.js" )
 var txt = require( "./lang_" + cts.SUFFIXE_LANG + ".js" )
 
 const ID_HTML_ERROR_FEEDBACK = "<br><div id='id_alert_error' class='alert alert-danger' style='display:none'>" +

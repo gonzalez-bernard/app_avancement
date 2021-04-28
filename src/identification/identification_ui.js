@@ -1,4 +1,4 @@
-var cts = require( "../constantes.js" )
+var cts = require( "../environnement/constantes.js" )
 var msg = require( "./msg.js" )
 var txt = require( "./lang_" + cts.SUFFIXE_LANG + ".js" )
 var utils = require( "./../modules/utils.js" )

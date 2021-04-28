@@ -1,4 +1,4 @@
-import { FOOTER } from "../constantes.js"
+import { FOOTER } from "../environnement/constantes.js"
 import * as msg from "./msg.js"
 import * as eq_msg from "./../equation/msg.js"
 import * as eq_txt from "./../equation/lang_fr.js"

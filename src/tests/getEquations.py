@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pprint import pprint
 
-from equation.Equation import *
+from src.equation.Equation import *
 data = []
 counter = 0
 

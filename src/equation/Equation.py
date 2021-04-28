@@ -35,7 +35,7 @@ class Equations:
     
     FILE_EQUATIONS = getFilePath(cst.FILE_EQUATIONS, os.path.abspath(os.getcwd())) + "/" + cst.FILE_EQUATIONS
 
-    def __init(self):
+    def __init__(self):
         pass
 
     @staticmethod
@@ -43,8 +43,13 @@ class Equations:
         """Analyse l'équation et retourne l'équation ainsi qu'une liste des réactifs et des produits
 
         Args:
-            equation (equation): chaine structurée chaque element est séparé par une virgule
-        les réactifs et les produits sont séparés par une chaine vide.
+            equation (equation): chaine structurée contenant les formules et les noms
+            chaque formule est séparé par une virgule, les exposants (charges) sont encadrés par %...%
+            les indices sont encadrés par _..._ 
+            les réactifs et les produits sont séparés par une chaine vide.
+            les formules et les noms sont séparés par 2 chaines vides
+            ex : 'Fe%2+%','H_3_O%+%','','Fe%3+%,'H_2_O','','','ion ferreux',hydronium','',ion ferrique','eau'
+
 
         Returns:
             string:  chaine formatée, (list) structure réactifs, (list) structure produits
@@ -639,6 +644,8 @@ class Equation:
     def dict2equation(dic):
         """Initialise les attributs de l'équation avec les valeurs du dictionnaire
 
+        Link: calc_avancement(avancement.py)
+        
         Args:
             dic (dict): valeurs à àinsérer
 

@@ -6,15 +6,10 @@ FONCTIONS :
  */
 //const ipc = require( 'electron' ).ipcRenderer
 import { form_valid_btn, get_decimal} from "./../modules/utils.js"
-
 import * as msg from "./msg.js"
-
-import { FOOTER } from '../constantes.js'
-
+import { FOOTER } from '../environnement/constantes.js'
 import { AV_BT_TAB, AV_TITRE, AV_TXT_LIMITANT, AV_TXT_XMAX, AV_TXT_RESTE } from "./lang_fr.js"
-
 import { init_tableau} from "./../tab_avancement/tab_ui.js"
-
 import { init_evolution} from "./../evolution/evolution_ui.js"
 
 var current_equation
